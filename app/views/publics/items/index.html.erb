@@ -1,0 +1,22 @@
+<h2>商品一覧</h2>
+<p>(全<%= @items.count %>件)</p>
+<table>
+    <tbody id="customer_item_index">
+        <% @items.each do |item| %>
+            <tr>
+                <td>
+                <%= link_to item_path(item.id) do %>
+                    <%= item.name %>
+                <% end %>
+                <div>
+                    <%= item.genre.name %>
+                </div>
+                <div>
+                    <b>￥<%= item.price %></b>
+                </div>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+ 

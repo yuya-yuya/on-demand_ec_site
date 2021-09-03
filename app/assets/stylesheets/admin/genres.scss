@@ -1,0 +1,38 @@
+// Place all the styles related to the admin/genres controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#genre_wrap{
+    width: 100%;
+}
+
+#genre_title{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#genre_title h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#genre_new{
+    width: 90%;
+    margin: 30px auto;
+}
+
+#genre_teble{
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+
+.genre_table_header{
+    background-color: gainsboro;
+}
+
+.genre_table_body{
+    border-top: 1px solid bl;
+}

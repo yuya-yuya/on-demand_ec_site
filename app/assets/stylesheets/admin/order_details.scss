@@ -1,0 +1,53 @@
+// Place all the styles related to the admin/order_details controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#order_detail_show_wrap{
+    width: 100%;
+}
+
+#order_detail_show_h2_wrap{
+    width: 60%;
+    margin: 20px auto 0;
+}
+
+#order_detail_show_h2{
+    font-size: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 0 20px;
+    display: inline;
+}
+
+#order_detail_show_table_first{
+    width: 70%;
+    margin: 10px auto 0;
+}
+
+#order_detail_show_table_first th{
+    width: 15%;
+}
+
+#order_detail_show_table_first td{
+    width: 85%;
+}
+
+#order_detail_show_table_div{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 40px auto 0;
+}
+
+#order_detail_show_table_second{
+    width: 60%;
+}
+
+#order_detail_show_table_second th{
+    background-color: gainsboro;
+    padding: 10px 0;
+}
+
+#order_detail_show_table_third{
+    width: 15%;
+}

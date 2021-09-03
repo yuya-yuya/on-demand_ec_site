@@ -1,0 +1,60 @@
+<div id="cart_item_index_wrap">
+    <div>
+        <h2 id="cart_item_index_title">ショッピングカート</h2>
+        <p id="cart_item_index_delete_all"><%= link_to "カートを空にする", cart_items_destroy_all_path, method: :delete, class: "btn btn-danger"%></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>商品名</th>
+                    <th>単価(税込)</th>
+                    <th>数量</th>
+                    <th>小計</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @sum = 0 %>
+                <% @cart_items.each do |cart_item| %>
+                    <tr>
+                        <td>
+                            <%= cart_item.item.name %>
+                        </td>
+                        <td>
+                            <%= (cart_item.item.price * 1.1).floor %>
+                        </td>
+                        <td>
+                            <%= form_with model:cart_item, url: cart_item_path(cart_item.id), local:true do |f| %>
+                                <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20 %>
+                                <%#= f.number_field :メソッド(送りたいカラム), placeholder: "",  min: 最小値, max: 最大値 %>
+                                <!--数値を送る方法-->
+                                <%= f.submit "変更", class: "btn btn-success" %>
+                            <% end %>
+                        </td>
+                        <td>
+                            <%= (cart_item.item.price * 1.1).floor * cart_item.amount %>
+                            <% @sum += (cart_item.item.price * 1.1).floor * cart_item.amount %>
+                            <!--↑合計金額を繰り返し処理で足している。表示させない。-->
+                        </td>
+                        <td>
+                            <%= link_to "削除する", cart_item_path(cart_item.id), method: :delete, class: "btn btn-danger" %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+        
+        <%= link_to "買い物を続ける", show_path, class: "btn btn-primary" %>
+        <table id="cart_item_index_sum">
+            <tbody>
+                <tr>
+                    <th>合計金額</th>
+                    <td>
+                        <%= @sum %>
+                        <!--合計金額の表示のさせ方注意-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="cart_item_index_input"><%= link_to "情報入力に進む", new_order_path, class: "btn btn-success" %></p>
+    </div>
+</div>
