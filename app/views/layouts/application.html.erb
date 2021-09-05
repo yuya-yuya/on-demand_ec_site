@@ -12,30 +12,45 @@
   
   <header>
     <% if customer_signed_in? %>
-      <ul id="header-list">
-        <li>
+      <div class="application_header_div">
+        <div>
           <%= link_to root_path do %></li>
             <%= image_tag 'movie.png', :size =>'150x80' %>
           <% end %>
-        </li>
-        <li><%= link_to "マイページ",show_path %></li>
-        <li><%= link_to "商品一覧", items_path%></li>
-        <li><%= link_to "カート", cart_items_path %></li>
-        <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete %></li>
-      </ul>
+        </div>
+        <ul id="header-list">
+          <li><%= link_to "マイページ",show_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "カート", cart_items_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: "btn btn-outline-secondary" %></li>
+        </ul>
+      </div>
     <% elsif admin_signed_in? %>
-      <ul id="header-list">
-        <li>
+      <div class="application_header_div">
+        <div>
           <%= link_to root_path do %></li>
             <%= image_tag 'movie.png', :size =>'150x80' %>
           <% end %>
-        </li>
-        <li><%= link_to "商品一覧", admin_items_path %></li>
-        <li><%= link_to "会員一覧", admin_customers_path %></li>
-        <li><%= link_to "注文履歴一覧", admin_orders_path %></li>
-        <li><%= link_to "ジャンル一覧", admin_genres_path %></li>
-        <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
-      </ul>
+        </div>
+        <div>
+          <ul id="header-list">
+            <li><%= link_to "商品一覧", admin_items_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "会員一覧", admin_customers_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "注文履歴一覧", admin_orders_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "ジャンル一覧", admin_genres_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "btn btn-outline-secondary" %></li>
+          </ul>
+          <div id="admin_header-search">
+            <%= form_with url: admin_search_path, method: :get, local:true do |f| %>
+              <%= f.text_field :search %>
+              <%= f.select :model , options_for_select({"顧客": :user,"商品": :item })%>
+              <%= f.select :how , options_for_select({完全一致: :"0",前方一致: :"1",後方一致: :"2",部分一致: :"3" })%>
+              <%= f.submit 'Search'%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <hr>
     <% else %>
       <ul id="header-list">
         <li>

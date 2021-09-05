@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     resources :genres, :only => [:index, :create, :edit, :update]
     resources :items
     resources :orders, :only => [:index, :show, :update]
-     resources :order_details, :only => [:update]
+    resources :order_details, :only => [:update]
+    get 'search' => 'searches#search'
   end
 end
