@@ -15,19 +15,30 @@
  */
  @import "bootstrap";
  
+ .application_header_div{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+ }
+ 
  header{
-     width: 100%;
+    width: 100%;
  }
  
  #header-list{
-     display: flex;
-     justify-content: flex-end;
-     width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin-right: 0;
  }
 
  #header-list li{
-     list-style: none;
-     margin-left: 20px;
+    list-style: none;
+    margin-left: 20px;
+ }
+
+ #admin_header-search{
+    text-align: right;
  }
  
  

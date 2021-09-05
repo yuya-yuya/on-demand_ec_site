@@ -1,3 +1,33 @@
 // Place all the styles related to the admin/items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#admin_item_index_wrap{
+  width: 100%;
+}
+
+#admin_item_index_title_wrap{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#admin_item_index_h2_div{
+  width: 70%;
+  margin: 30px auto 10px;
+}
+
+#admin_item_index_h2_div h2{
+  font-size: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 0 20px;
+  display: inline;
+  vertical-align: middle;
+}
+
+#admin_item_index_table{
+  width: 70%;
+  margin: 0 auto;
+}
