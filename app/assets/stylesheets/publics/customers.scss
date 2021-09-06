@@ -1,24 +1,65 @@
 // Place all the styles related to the publics/customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.customer_show_edit{
-    display: inline;
-}
-
-#customer_show_table{
+#public_customer_show_wrap{
     width: 100%;
 }
 
-#customer_show_table table{
+#public_customer_show_h2_wrap{
+    width: 70%;
+    margin: 30px auto 20px;
+}
+
+#public_customer_show_h2_wrap h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#public_customer_show_main_wrap{
     width: 80%;
-    display: block;
     margin: 0 auto;
 }
 
-#mypage_title{
-    background-color: gray;
+#public_customer_show_main_wrap h4:first-child{
+    font-size: 20px;
+    font-weight: bold; 
     display: inline;
-    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#public_customer_show_main_wrap h4{
+    font-size: 20px;
+    font-weight: bold; 
+    display: inline;
+    margin: 10px 0;
+}
+
+#public_customer_show_main_edit{
+    display: inline;
+}
+
+#public_customer_show_main_firsttable{
+    width: 80%;
+    margin: 15px 0 30px 0;
+}
+
+#public_customer_show_main_firsttable th{
+    width: 20%;
+    padding: 10px 0;
+}
+
+#public_customer_show_main_firsttable td{
+    width: 70%;
+    padding: 10px 0;
+}
+
+#public_customer_show_main_delivery{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 #unsubscribed_div{
