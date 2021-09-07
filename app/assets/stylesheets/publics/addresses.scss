@@ -1,3 +1,99 @@
 // Place all the styles related to the publics/addresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#public_addresses_index_wrap{
+  width: 100%;
+}
+
+#public_addresses_index_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#public_addresses_index_h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#public_addresses_index_table_wrap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#public_addresses_index_firsttable{
+  width: 100%;
+}
+
+#public_addresses_index_firsttable th{
+  width: 20%;
+}
+
+#public_addresses_index_firsttable_td{
+  display: flex;
+  justify-content: space-between;
+}
+
+#public_addresses_index_firsttable_name{
+  display: inline;
+}
+
+#public_addresses_index_secondtable{
+  width: 80%;
+  margin-top: 50px;
+}
+
+#public_addresses_index_secondtable th:nth-child(1){
+  width: 15%;
+}
+
+#public_addresses_index_secondtable th:nth-child(2){
+  width: 40%;
+}
+
+#public_addresses_index_secondtable th:nth-child(3){
+  width: 15%;
+}
+
+#public_addresses_index_secondtable th:nth-child(4){
+  width: 30%;
+}
+
+#public_addresses_index_secondtable_edit_delete{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#public_address_edit_wrap{
+  width: 100%;
+}
+
+#public_addresses_edit_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#public_addresses_edit_h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#public_addresses_edit_table_wrap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#public_addresses_edit_firsttable{
+  width: 100%;
+}
+
+#public_addresses_edit_firsttable_td{
+  display: flex;
+  justify-content: space-between;
+}
