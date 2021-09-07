@@ -4476,3 +4476,1714 @@ Processing by Publics::SessionsController#create as HTML
   ↳ app/controllers/publics/sessions_controller.rb:22
   [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "yytyfp5115@icloud.com"], ["LIMIT", 1]]
   ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Started GET "/" for 172.28.0.1 at 2021-09-07 03:31:45 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Publics::HomesController#top as HTML
+  Rendering publics/homes/top.html.erb within layouts/application
+  Rendered publics/homes/top.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 5188ms (Views: 5116.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 172.28.0.1 at 2021-09-07 03:31:55 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#new as HTML
+  Rendering publics/sessions/new.html.erb within layouts/application
+  Rendered publics/shared/_links.html.erb (3.1ms)
+  Rendered publics/sessions/new.html.erb within layouts/application (664.3ms)
+Completed 200 OK in 1353ms (Views: 1318.6ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/customers/sign_in" for 172.28.0.1 at 2021-09-07 03:32:07 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DEM027fCtjff+IX+Hku5Yj+JUsPvMndjuVa+MagRGlit8IvrWwfVJO3+aH5dhTOkN+u7eIcqsibgzv1Plbt3dA==", "customer"=>{"email"=>"yytyfp5115@icloud.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCustomer Load (3.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "yytyfp5115@icloud.com"], ["LIMIT", 1]]
+  ↳ app/controllers/publics/sessions_controller.rb:22
+  [1m[36mCustomer Load (3.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "yytyfp5115@icloud.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/show
+Completed 302 Found in 736ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/show" for 172.28.0.1 at 2021-09-07 03:32:07 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 599ms (Views: 553.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 03:32:12 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:33
+  Rendered publics/addresses/index.html.erb within layouts/application (14.8ms)
+  [1m[36mCustomer Load (2.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 606ms (Views: 478.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/items" for 172.28.0.1 at 2021-09-07 03:44:46 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:2
+  [1m[36mItem Load (3.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:5
+  Rendered publics/items/index.html.erb within layouts/application (18.8ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 564ms (Views: 478.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/show" for 172.28.0.1 at 2021-09-07 03:44:48 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 509ms (Views: 461.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/show" for 172.28.0.1 at 2021-09-07 03:45:20 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 599ms (Views: 552.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/edit" for 172.28.0.1 at 2021-09-07 03:45:21 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (4.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 558ms (Views: 509.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:45:24 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (246.4ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customers_show_path' for #<#<Class:0x00007ff67952edc0>:0x00007ff67a533608>):
+     7:  </p>
+     8: </div>
+     9: 
+    10: <p id="unsubscribed_p"><%= link_to "退会しない", customers_show_path, class: "btn btn-primary" %></p>
+    11: <p id="unsubscribed_p"><%= link_to "退会する", customers_withdraw_path, class: "btn btn-danger", method: :patch, data: {comfirm: "本当に退会しますか?"} %></p>
+  
+app/views/publics/customers/unsubscribed.html.erb:10:in `_app_views_publics_customers_unsubscribed_html_erb___1790654571741908857_70348290678960'
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:47:29 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (204.2ms)
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 2.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customers_withdraw_path' for #<#<Class:0x00007ff67952edc0>:0x000055a051402760>):
+     8: </div>
+     9: 
+    10: <p id="unsubscribed_p"><%= link_to "退会しない", show_path, class: "btn btn-primary" %></p>
+    11: <p id="unsubscribed_p"><%= link_to "退会する", customers_withdraw_path, class: "btn btn-danger", method: :patch, data: {comfirm: "本当に退会しますか?"} %></p>
+  
+app/views/publics/customers/unsubscribed.html.erb:11:in `_app_views_publics_customers_unsubscribed_html_erb___1790654571741908857_47073523134620'
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:47:37 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 606ms (Views: 566.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:52:06 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (3.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 6237ms (Views: 6192.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:54:23 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (3.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 4767ms (Views: 4698.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:55:21 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4639ms (Views: 4522.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:55:48 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4729ms (Views: 4690.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:56:25 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4648ms (Views: 4609.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:56:42 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 774ms (Views: 717.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:56:50 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 546ms (Views: 509.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:57:07 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4655ms (Views: 4613.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:57:22 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 4450ms (Views: 4417.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:57:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 4502ms (Views: 4468.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:58:17 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 4531ms (Views: 4491.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/unsubscribed" for 172.28.0.1 at 2021-09-07 03:58:27 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 636ms (Views: 605.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/show" for 172.28.0.1 at 2021-09-07 04:02:20 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 592ms (Views: 546.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:02:22 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:33
+  Rendered publics/addresses/index.html.erb within layouts/application (10.9ms)
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 579ms (Views: 529.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:06:54 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4670ms (Views: 4607.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:07:26 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (9.2ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4341ms (Views: 4306.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:07:58 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (9.8ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 662ms (Views: 628.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:08:37 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (9.5ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4570ms (Views: 4529.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:08:45 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (9.7ms)
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 573ms (Views: 540.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:09:00 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:36
+  Rendered publics/addresses/index.html.erb within layouts/application (14.6ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4927ms (Views: 4890.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:10:11 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4750ms (Views: 4707.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 04:10:28 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q56UuqqhqUWcQRNOZJjrgIhawUoDbaIrRQoWFfNFnKM0aHofsg6bLiXPnltditptq/7aLH1MxFFPX8iaRKPNvg==", "address"=>{"postal_code"=>"2230064", "address"=>"神奈川県", "name"=>"山田佑弥"}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mAddress Create (12.6ms)[0m  [1m[32mINSERT INTO "addresses" ("customer_id", "name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["name", "山田佑弥"], ["postal_code", "2230064"], ["address", "神奈川県"], ["created_at", "2021-09-07 04:10:28.800828"], ["updated_at", "2021-09-07 04:10:28.800828"]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 131ms (ActiveRecord: 27.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:10:28 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (4.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (11.6ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 577ms (Views: 530.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:11:13 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (10.5ms)
+  [1m[36mCustomer Load (4.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 691ms (Views: 647.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:11:28 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (9.8ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 630ms (Views: 591.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:12:55 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (11.8ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4840ms (Views: 4798.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:13:35 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:37
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4739ms (Views: 4695.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:14:13 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCustomer Load (2.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 707ms (Views: 667.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:15:16 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (11.9ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4815ms (Views: 4769.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:16:36 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (14.1ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5000ms (Views: 4954.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:17:33 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4803ms (Views: 4769.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:18:48 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (10.4ms)
+  [1m[36mCustomer Load (5.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 746ms (Views: 708.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:19:31 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4500ms (Views: 4463.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:20:14 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (12.2ms)
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4646ms (Views: 4608.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:20:22 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (11.8ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 570ms (Views: 534.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:20:41 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (10.7ms)
+  [1m[36mCustomer Load (3.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4933ms (Views: 4898.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:21:42 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (13.0ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5010ms (Views: 4972.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:22:02 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (9.2ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4663ms (Views: 4629.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:23:17 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (33.2ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4734ms (Views: 4695.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:23:47 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (10.4ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4459ms (Views: 4423.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:25:30 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (8.6ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4743ms (Views: 4698.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:26:11 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (9.1ms)
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5067ms (Views: 5034.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:26:44 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (9.6ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4703ms (Views: 4648.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:29:04 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (13.8ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4962ms (Views: 4895.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:30:17 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:39
+  Rendered publics/addresses/index.html.erb within layouts/application (13.6ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4853ms (Views: 4815.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:31:13 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (5.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:41
+  Rendered publics/addresses/index.html.erb within layouts/application (21.9ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4842ms (Views: 4793.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:32:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:41
+  Rendered publics/addresses/index.html.erb within layouts/application (13.5ms)
+  [1m[36mCustomer Load (3.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1122ms (Views: 1029.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 04:59:06 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:41
+  Rendered publics/addresses/index.html.erb within layouts/application (9.0ms)
+  [1m[36mCustomer Load (4.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4408ms (Views: 4357.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:01:41 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:45
+  Rendered publics/addresses/index.html.erb within layouts/application (10.4ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4616ms (Views: 4576.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:02:04 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:45
+  Rendered publics/addresses/index.html.erb within layouts/application (8.0ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4903ms (Views: 4869.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:03:10 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4847ms (Views: 4808.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:03:45 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4646ms (Views: 4606.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:03:52 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 573ms (Views: 536.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:04:03 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (9.3ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4597ms (Views: 4562.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:04:12 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.2ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 547ms (Views: 511.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:05:06 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app_name/app/views/publics/addresses/index.html.erb:17: syntax error, unexpected ')', expecting =>
+...々木神南町0-0", size="12" );@output_buffer.safe_append='...
+...                               ^
+/app_name/app/views/publics/addresses/index.html.erb:31: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+/app_name/app/views/publics/addresses/index.html.erb:69: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/app_name/app/views/publics/addresses/index.html.erb:71: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/publics/addresses/index.html.erb:17: syntax error, unexpected ')', expecting =>
+app/views/publics/addresses/index.html.erb:31: syntax error, unexpected end, expecting ')'
+app/views/publics/addresses/index.html.erb:69: syntax error, unexpected ensure, expecting ')'
+app/views/publics/addresses/index.html.erb:71: syntax error, unexpected end, expecting ')'
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:07:17 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app_name/app/views/publics/addresses/index.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting =>
+...代々木神南町0-0", :size "12" );@output_buffer.safe_app...
+...                              ^):
+  
+app/views/publics/addresses/index.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting =>
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:07:52 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (13.3ms)
+  [1m[36mCustomer Load (16.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 797ms (Views: 732.2ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:08:54 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (9.3ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 692ms (Views: 654.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:09:20 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (10.6ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 553ms (Views: 513.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:10:08 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.6ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 582ms (Views: 544.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:10:11 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (11.4ms)
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 537ms (Views: 503.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/show" for 172.28.0.1 at 2021-09-07 05:10:32 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 559ms (Views: 514.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:10:34 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (6.9ms)
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 516ms (Views: 475.7ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:10:38 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tO9rhNDModlf7BD1ozaawW9ua4SnDq7aXEfZii9SZ2yYiHNLKpSSxKmbhQviccfqZdrPBrm9SS3ydb7Rqrvbng==", "address"=>{"postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (34.2ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                 </tr>
+    41:             </thead>
+    42:             <tbody>
+    43:                 <% @addresses.each do |address| %>
+    44:                     <tr>
+    45:                         <td height="50">
+    46:                             <%= address.postal_code %>
+  
+app/views/publics/addresses/index.html.erb:43:in `_app_views_publics_addresses_index_html_erb___3736838660346478706_70348582118420'
+app/controllers/publics/addresses_controller.rb:14:in `create'
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:11:26 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2TX91gWJe473PN6IhlmrXk6uGklPQy8FMWJUk2SgkS2uwxNzHSZJ5U6yU52/S5qzbQoBLzFiSX87N4oc00bAMA==", "address"=>{"postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                 </tr>
+    41:             </thead>
+    42:             <tbody>
+    43:                 <% @addresses.each do |address| %>
+    44:                     <tr>
+    45:                         <td height="50">
+    46:                             <%= address.postal_code %>
+  
+app/views/publics/addresses/index.html.erb:43:in `_app_views_publics_addresses_index_html_erb___3736838660346478706_70348648445260'
+app/controllers/publics/addresses_controller.rb:14:in `create'
+Started GET "/items" for 172.28.0.1 at 2021-09-07 05:11:36 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:2
+  [1m[36mItem Load (2.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:5
+  Rendered publics/items/index.html.erb within layouts/application (10.8ms)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 494ms (Views: 450.8ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:12:19 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2TX91gWJe473PN6IhlmrXk6uGklPQy8FMWJUk2SgkS2uwxNzHSZJ5U6yU52/S5qzbQoBLzFiSX87N4oc00bAMA==", "address"=>{"postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (30.2ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                 </tr>
+    41:             </thead>
+    42:             <tbody>
+    43:                 <% @addresses.each do |address| %>
+    44:                     <tr>
+    45:                         <td height="50">
+    46:                             <%= address.postal_code %>
+  
+app/views/publics/addresses/index.html.erb:43:in `_app_views_publics_addresses_index_html_erb___3736838660346478706_70348582494980'
+app/controllers/publics/addresses_controller.rb:14:in `create'
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:12:48 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2TX91gWJe473PN6IhlmrXk6uGklPQy8FMWJUk2SgkS2uwxNzHSZJ5U6yU52/S5qzbQoBLzFiSX87N4oc00bAMA==", "address"=>{"postal_code"=>"2230064", "address"=>"神奈川県横浜市", "name"=>"山田幸恵"}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mAddress Create (13.9ms)[0m  [1m[32mINSERT INTO "addresses" ("customer_id", "name", "postal_code", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["name", "山田幸恵"], ["postal_code", "2230064"], ["address", "神奈川県横浜市"], ["created_at", "2021-09-07 05:12:48.791904"], ["updated_at", "2021-09-07 05:12:48.791904"]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 47ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/addresses" for 172.28.0.1 at 2021-09-07 05:12:48 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (5.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (12.6ms)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 576ms (Views: 538.9ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:13:18 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oyc+BnIsQ9pvwK4ZWL8dxyYmfInaFXKfTmR7EvflPJBM0dCjaoNxsdZOIwxhrSwqBYJn76Q0FOVEMaWdQANtjQ==", "address"=>{"postal_code"=>"2230064", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:10
+  Rendering publics/addresses/index.html.erb within layouts/application
+  Rendered publics/addresses/index.html.erb within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                 </tr>
+    41:             </thead>
+    42:             <tbody>
+    43:                 <% @addresses.each do |address| %>
+    44:                     <tr>
+    45:                         <td height="50">
+    46:                             <%= address.postal_code %>
+  
+app/views/publics/addresses/index.html.erb:43:in `_app_views_publics_addresses_index_html_erb___3736838660346478706_70348578303440'
+app/controllers/publics/addresses_controller.rb:14:in `create'
+Started POST "/addresses" for 172.28.0.1 at 2021-09-07 05:13:39 +0000
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oyc+BnIsQ9pvwK4ZWL8dxyYmfInaFXKfTmR7EvflPJBM0dCjaoNxsdZOIwxhrSwqBYJn76Q0FOVEMaWdQANtjQ==", "address"=>{"postal_code"=>"2230064", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+Started GET "/" for 172.29.0.1 at 2021-09-07 05:18:57 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Publics::HomesController#top as HTML
+  Rendering publics/homes/top.html.erb within layouts/application
+  Rendered publics/homes/top.html.erb within layouts/application (4.8ms)
+  [1m[36mCustomer Load (4.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 6387ms (Views: 6291.8ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:19:36 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 546ms (Views: 501.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:19:38 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (682.6ms)
+  [1m[36mCustomer Load (3.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 1395ms (Views: 1288.1ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/addresses" for 172.29.0.1 at 2021-09-07 05:19:44 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6epwxDwechb62uf3Dyq2EyuAygPWulTdcdgk0vck44nFjWgLxkZBCwytcglObes4ITRugcgJsyrf6kOJcs1few==", "address"=>{"postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 636ms (Views: 563.4ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:20:53 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 552ms (Views: 503.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:20:56 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 508ms (Views: 460.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:21:01 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 527ms (Views: 480.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:21:07 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 576ms (Views: 524.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cart_items" for 172.29.0.1 at 2021-09-07 05:21:14 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (3.3ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:17
+  Rendered publics/cart_items/index.html.erb within layouts/application (15.4ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 565ms (Views: 470.6ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/items" for 172.29.0.1 at 2021-09-07 05:21:17 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:2
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:5
+  Rendered publics/items/index.html.erb within layouts/application (15.4ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 525ms (Views: 436.7ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:21:18 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 504ms (Views: 447.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:21:20 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.3ms)
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 497ms (Views: 454.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:21:23 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (3.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 491ms (Views: 443.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:22:33 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 614ms (Views: 550.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:25:16 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (4.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.5ms)
+  [1m[36mCustomer Load (4.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 6121ms (Views: 6071.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:26:35 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.1ms)
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4825ms (Views: 4773.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:28:30 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (3.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.1ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5147ms (Views: 5089.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:29:07 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (1.8ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4573ms (Views: 4532.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:29:20 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 573ms (Views: 532.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:29:22 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 510ms (Views: 468.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:29:27 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 519ms (Views: 471.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:30:34 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 666ms (Views: 599.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:30:37 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (1.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.7ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 546ms (Views: 508.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:30:46 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (2.7ms)
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:30:48 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (3.0ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5647ms (Views: 5601.5ms | ActiveRecord: 4.0ms)
+
+
+  [1m[36mCustomer Load (3.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 3932ms (Views: 3874.9ms | ActiveRecord: 6.1ms)
+
+
+Started PATCH "/addresses/1" for 172.29.0.1 at 2021-09-07 05:31:13 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bW2EeeTudg0N5JLvwAdYxcfbcb2OCZSWiaOFVnijYysam2rc/EFEZrRqH/r5FWko5H9q2/Ao8uyD9lvZz0UyNg==", "address"=>{"postal_code"=>"2230064", "address"=>"神奈川県横浜市港北区下田町1-14-4", "name"=>"山田佑弥"}, "commit"=>"変更内容を保存", "id"=>"1"}
+  [1m[36mAddress Load (2.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:25
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:25
+  [1m[36mAddress Update (9.2ms)[0m  [1m[33mUPDATE "addresses" SET "address" = ?, "updated_at" = ? WHERE "addresses"."id" = ?[0m  [["address", "神奈川県横浜市港北区下田町1-14-4"], ["updated_at", "2021-09-07 05:31:13.400646"], ["id", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:25
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:25
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 44ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:31:13 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (6.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (18.9ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 648ms (Views: 609.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:31:17 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (3.4ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (3.5ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 529ms (Views: 485.7ms | ActiveRecord: 5.3ms)
+
+
+Started PATCH "/addresses/1" for 172.29.0.1 at 2021-09-07 05:31:26 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z1ksSCF4OK7h51X68ModO8tuLac/AmzIVYRZDD+okse0Ln77V/Z3W7JUbLUhvtVRw34AVug+lJSl+NK+SuC7uw==", "address"=>{"postal_code"=>"2230064", "address"=>"神奈川県横浜市港北区下田町1-14-4", "name"=>"山田佑弥"}, "commit"=>"変更内容を保存", "id"=>"1"}
+  [1m[36mAddress Load (3.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:25
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:25
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 29ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:31:26 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 570ms (Views: 532.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:31:30 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (4.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 471ms (Views: 430.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:31:35 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 523ms (Views: 479.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:31:37 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 557ms (Views: 505.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:31:39 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (32.4ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 521ms (Views: 476.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/addresses/1/edit" for 172.29.0.1 at 2021-09-07 05:31:42 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAddress Load (2.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:20
+  Rendering publics/addresses/edit.html.erb within layouts/application
+  Rendered publics/addresses/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 505ms (Views: 459.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:31:59 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (10.2ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4886ms (Views: 4847.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:33:43 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (3.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (10.7ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 4810ms (Views: 4767.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:33:52 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (11.7ms)
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 571ms (Views: 536.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:34:19 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.4ms)
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 664ms (Views: 624.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:34:25 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 542ms (Views: 495.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items" for 172.29.0.1 at 2021-09-07 05:34:27 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:2
+  [1m[36mItem Load (3.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:5
+  Rendered publics/items/index.html.erb within layouts/application (15.1ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 602ms (Views: 550.2ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/cart_items" for 172.29.0.1 at 2021-09-07 05:34:28 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (2.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:17
+  Rendered publics/cart_items/index.html.erb within layouts/application (7.5ms)
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 528ms (Views: 484.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/items" for 172.29.0.1 at 2021-09-07 05:34:32 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:2
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:5
+  Rendered publics/items/index.html.erb within layouts/application (11.7ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 557ms (Views: 512.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:34:33 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 573ms (Views: 482.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:34:39 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 470ms (Views: 425.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/unsubscribed" for 172.29.0.1 at 2021-09-07 05:34:42 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#unsubscribed as HTML
+  [1m[36mCustomer Load (3.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/unsubscribed.html.erb within layouts/application
+  Rendered publics/customers/unsubscribed.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 514ms (Views: 464.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:34:44 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 518ms (Views: 472.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:34:47 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 477ms (Views: 437.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:34:49 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 558ms (Views: 514.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/addresses" for 172.29.0.1 at 2021-09-07 05:34:50 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#index as HTML
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (1.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.0ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 486ms (Views: 442.8ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/addresses" for 172.29.0.1 at 2021-09-07 05:34:52 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KotjXROSdMRRuwcHQJ7K5y09uRTJ9T/CzjG65PSZmEIG7HuS6cpH2afMkvkB2ZfMJ4kdltdG2DVgA92/cXAksA==", "address"=>{"postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>" 新規登録する"}
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/addresses_controller.rb:11
+  Rendering publics/addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (2.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/publics/addresses/index.html.erb:43
+  Rendered publics/addresses/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 534ms (Views: 510.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/show" for 172.29.0.1 at 2021-09-07 05:34:55 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 509ms (Views: 474.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/edit" for 172.29.0.1 at 2021-09-07 05:34:57 +0000
+Cannot render console from 172.29.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#edit as HTML
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/edit.html.erb within layouts/application
+  Rendered publics/customers/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 489ms (Views: 446.9ms | ActiveRecord: 3.3ms)
+
+
