@@ -7854,3 +7854,37 @@ Processing by Publics::CustomersController#show as HTML
 Completed 200 OK in 567ms (Views: 531.2ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/show" for 172.31.0.1 at 2021-09-08 04:06:00 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (4.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 757ms (Views: 711.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/items" for 172.31.0.1 at 2021-09-08 04:06:02 +0000
+Cannot render console from 172.31.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:9
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:13
+  [1m[36mGenre Load (1.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/index.html.erb:20
+  [1m[36mGenre Load (1.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/publics/items/index.html.erb:20
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/items/index.html.erb:20
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/items/index.html.erb:20
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/items/index.html.erb:20
+  Rendered publics/items/index.html.erb within layouts/application (27.9ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 529ms (Views: 481.8ms | ActiveRecord: 10.6ms)
+
+
