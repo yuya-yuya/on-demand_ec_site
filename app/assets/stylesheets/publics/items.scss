@@ -1,6 +1,51 @@
 // Place all the styles related to the publics/items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#customer_item_index{
+#public_item_index_wrap{
+    width: 100%;
+}
+
+#public_item_index_inside_wrap{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
+}
+
+#public_item_index_genre{
+    width: 20%;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+#public_item_index_genre h4{
+    border: 1px solid black;
+}
+
+#public_item_index_main{
+    width: 80%;
+}
+
+#public_item_index_main div:nth-child(1){
+    margin-bottom: 20px;
+}
+
+#public_item_index_main div:nth-child(1) h2{
+    display: inline;
+}
+
+#public_item_index_main div:nth-child(1) p{
+    display: inline;
+}
+
+#public_item_index_table{
+    width: 100%;
+}
+
+#public_item_index_table_tbody{
+    display: flex;
+    width: 100%;
+}
+
+#public_item_index_table tr{
+    width: 22%;
 }

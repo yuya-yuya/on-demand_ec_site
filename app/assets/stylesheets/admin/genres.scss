@@ -23,16 +23,75 @@
     margin: 30px auto;
 }
 
+.admin_genre_index_main_input{
+    margin-right: 20px;
+}
+
 #genre_teble{
     width: 90%;
     margin: 20px auto 0;
 }
 
+#admin_genre_index_table{
+    width: 30%;
+}
 
-.genre_table_header{
-    background-color: gainsboro;
+#admin_genre_index_table td,th{
+    padding: 10px;
+}
+
+#admin_genre_index_table_first_th{
+    text-align: center;
+}
+
+#admin_genre_index_table tr:nth-child(1){
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+#admin_genre_index_table tr{
+    border-bottom: 1px solid black;
+    padding: 10px;
 }
 
 .genre_table_body{
     border-top: 1px solid bl;
+}
+
+#admin_genre_index_table tbody{
+    width: 100%;
+}
+
+#admin_genre_index_table_first_td{
+    width: 60%;
+}
+
+#admin_genre_index_tablefirst_second_td{
+    width: 40%;
+}
+
+#admin_genre_edit_wrap{
+    width: 100%;
+}
+
+#admin_genre_edit_h2_div{
+    width: 70%;
+    margin: 30px auto 20px;
+}
+
+#admin_genre_edit_h2_div h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#admin_genre_edit_main_div{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin_genre_edit_main_input{
+    margin-right: 20px;
 }
