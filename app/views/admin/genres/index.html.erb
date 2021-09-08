@@ -6,25 +6,25 @@
         <%= form_with model:@genre, url: admin_genres_path, local:true do |f| %>
             <%= flash[:success] %></br>
             <%= flash[:error] %></br>
-            <%= f.label :ジャンル名 %>
-            <%= f.text_field :name %>
+            <%= f.label :ジャンル名, class: "admin_genre_index_main_input" %>
+            <%= f.text_field :name, class: "admin_genre_index_main_input" %>
             <%= f.submit "新規登録", class: "btn btn-success"%>
         <% end %>
     </div>
     
     <div id="genre_teble">
-        <table>
+        <table id="admin_genre_index_table">
             <thead>
                 <tr>
-                    <th class="genre_table_header">ジャンル</th>
-                    <th class="genre_table_header"></th>
+                    <th class="table-secondary" id="admin_genre_index_table_first_th">ジャンル</th>
+                    <th class="table-secondary"></th>
                 </tr>
             </thead>
             <tbody>
                 <% @genres.each do |genre| %>
                     <tr class="genre_table_body">
-                        <td><%= genre.name %></td>
-                        <td><%= link_to "編集する", edit_admin_genre_path(genre.id), class: "btn btn-success"%></td>
+                        <td id="admin_genre_index_table_first_td"><%= genre.name %></td>
+                        <td id="admin_genre_index_table_second_td"><%= link_to "編集する", edit_admin_genre_path(genre.id), class: "btn btn-success"%></td>
                     </tr>
                 <% end %>
             </tbody>

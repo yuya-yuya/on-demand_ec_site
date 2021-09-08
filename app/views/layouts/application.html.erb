@@ -18,6 +18,7 @@
             <%= image_tag 'movie.png', :size =>'150x80' %>
           <% end %>
         </div>
+        <p>ようこそ、<%= current_customer.first_name %>さん！</p>
         <ul id="header-list">
           <li><%= link_to "マイページ",show_path, class: "btn btn-outline-secondary" %></li>
           <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>

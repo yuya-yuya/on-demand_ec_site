@@ -1,7 +1,13 @@
-<h2>ジャンル編集</h2>
-    <%= flash[:error]%>
-    <%= form_with model:@genre, url: admin_genre_path, local:true do |f| %>
-        <%= f.label :ジャンル名 %>
-        <%= f.text_field :name %>
-        <%= f.submit "変更を保存", class: "btn btn-success"%>
-    <% end %>
+<div id="admin_genre_edit_wrap">
+    <div id="admin_genre_edit_h2_div">
+        <h2>ジャンル編集</h2>
+    </div>
+    <div id="admin_genre_edit_main_div">
+        <%= flash[:error]%>
+        <%= form_with model:@genre, url: admin_genre_path, local:true do |f| %>
+            <%= f.label :ジャンル名, class: "admin_genre_edit_main_input" %>
+            <%= f.text_field :name, class: "admin_genre_edit_main_input" %>
+            <%= f.submit "変更を保存", class: "btn btn-success"%>
+        <% end %>
+    </div>
+</div>

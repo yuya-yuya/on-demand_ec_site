@@ -1,22 +1,33 @@
-<h2>商品一覧</h2>
-<p>(全<%= @items.count %>件)</p>
-<table>
-    <tbody id="customer_item_index">
-        <% @items.each do |item| %>
-            <tr>
-                <td>
-                <%= link_to item_path(item.id) do %>
-                    <%= item.name %>
-                <% end %>
-                <div>
-                    <%= item.genre.name %>
-                </div>
-                <div>
-                    <b>￥<%= item.price %></b>
-                </div>
-                </td>
-            </tr>
-        <% end %>
-    </tbody>
-</table>
+<div id="public_item_index_wrap">
+    <div id="public_item_index_inside_wrap">
+        <div id="public_item_index_genre">
+            <h4>test</h4>
+        </div>
+        <div id="public_item_index_main">
+            <div>
+                <h2>商品一覧</h2>
+                <p>(全<%= @items.count %>件)</p>
+            </div>
+            <table id="public_item_index_table">
+                <tbody id="public_item_index_table_tbody">
+                    <% @items.each do |item| %>
+                        <tr>
+                            <td>
+                            <%= link_to item_path(item.id) do %>
+                                <%= item.name %>
+                            <% end %>
+                            <div>
+                                <%= item.genre.name %>
+                            </div>
+                            <div>
+                                <b>￥<%= item.price %></b>
+                            </div>
+                            </td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div>
  
