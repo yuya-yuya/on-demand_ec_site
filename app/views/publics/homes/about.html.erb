@@ -1,0 +1,34 @@
+<div id="public_about_wrap">
+  <div id="public_about_inside_wrap">
+    <div id="public_about_genre">
+      <h4>ジャンル検索</h4>
+      <div>
+        <% @genres.each do |genre| %>
+          <p><%= genre.name %></p><br>
+        <% end %>
+      </div>
+    </div>
+    <div id="public_about_main">
+      <div id="public_about_main_intro">
+        <p>
+          ようこそ、ながのCAKEへ！<br>
+          このサイトは、ケーキ販売のECサイトになります。<br>
+          会員でない方も商品の閲覧はできますが、<br>
+          購入には会員登録になります。
+        </p>
+      </div>
+      <div id="public_about_main_item">
+        <h4>新着商品</h4>
+        <div id="public_about_main_item_outer">
+          <% @items.each do |item| %>
+            <div>
+              <p><%= item.name %></p>
+              <p>¥<%= item.price %></p>
+            </div>
+          <% end %>
+        </div>
+        <p id="public_about_main_item_all"><%= link_to "すべての商品を見る", items_path %></p>
+      </div>
+    </div>
+  </div>
+</div>

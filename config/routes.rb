@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope module: :publics do
     get 'edit' => 'customers#edit'
     root to: 'homes#top'
+    get 'about' => 'homes#about'
     devise_for :customers
     resources :items, :only => [:index, :show]
     get 'show' => 'customers#show'
