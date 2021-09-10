@@ -22,8 +22,9 @@
         <div id="public_about_main_item_outer">
           <% @items.each do |item| %>
             <div>
-              <p><%= item.name %></p>
-              <p>¥<%= item.price %></p>
+              <%= attachment_image_tag item, :image, format: 'jpeg', size: "100x100" %>
+              <p><b><%= item.name %></b></p>
+              <p><b>¥<%= item.price %></b></p>
             </div>
           <% end %>
         </div>

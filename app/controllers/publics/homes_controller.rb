@@ -4,6 +4,6 @@ class Publics::HomesController < ApplicationController
 
     def about
         @genres = Genre.all
-        @items = Item.all.order(created_at: :desc).last(4)
+        @items = Item.all.order(created_at: :desc).limit(4)
     end
 end

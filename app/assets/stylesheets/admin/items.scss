@@ -31,3 +31,30 @@
   width: 70%;
   margin: 0 auto;
 }
+
+#admin_item_index_table td{
+  padding: 10px;
+}
+
+#admin_item_new_wrap{
+  width: 100%;
+}
+
+#admin_item_new_h2_wrap{
+  width: 60%;
+  margin: 30px auto 10px;
+}
+
+#admin_item_new_h2_wrap h2{
+  font-size: 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 0 20px;
+  display: inline;
+  vertical-align: middle;
+}
+
+#admin_item_new_table_wrap{
+  width: 25%;
+  margin: 0 auto;
+}
