@@ -54,17 +54,20 @@
       </div>
       <hr>
     <% else %>
-      <ul id="header-list">
-        <li>
+      <div class="application_header_div">
+        <div>
           <%= link_to root_path do %></li>
             <%= image_tag 'movie.png', :size =>'150x80' %>
           <% end %>
-        </li>
-        <li><%= link_to "about", about_path, class: "btn btn-outline-secondary" %></li>
-        <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>
-        <li><%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary" %></li>
-        <li><%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary" %></li>
-      </ul>
+        </div>
+        <ul id="header-list">
+          <li><%= link_to "about", about_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary" %></li>
+          <li><%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary" %></li>
+        </ul>
+      </div>
+      <hr>
     <% end %>
   </header>
 

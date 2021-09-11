@@ -19,6 +19,8 @@
     display: flex;
     justify-content: space-between;
     padding: 30px;
+    width: 80%;
+    margin: 0 auto;
  }
  
  header{
@@ -41,22 +43,22 @@
     text-align: right;
  }
  
- #public_about_wrap{
+ #public_top_wrap{
     width: 100%;
  }
 
- #public_about_inside_wrap{
+ #public_top_inside_wrap{
    width: 80%;
    margin: 0 auto;
    display: flex;
  }
 
- #public_about_genre{
+ #public_top_genre{
    width: 20%;
    padding: 20px;
  }
 
- #public_about_genre h4{
+ #public_top_genre h4{
    border: 1px solid black;
    font-size: 15px;
    text-align: center;
@@ -64,46 +66,64 @@
    border-bottom: none;
  }
 
- #public_about_genre div{
+ #public_top_genre div{
    border: 1px solid black;
  }
 
- #public_about_genre div p{
+ #public_top_genre div p{
    padding: 5px 10px;
    margin-bottom: 0;
  }
 
- #public_about_genre div br{
+ #public_top_genre div br{
    display: block;
    content: "";
    margin: 0;
  }
 
- #public_about_main{
+ #public_top_main{
     width: 80%;
     padding: 20px;
  }
 
- #public_about_main_intro{
+ #public_top_main_intro{
     width: 80%;
  }
 
- #public_about_main_intro{
-    text-align: center;
+ #public_top_main_intro{
+  background-size: cover;
+  background-image: url("<%= asset_path('cake2.jpg') %>");
+  text-align: center;
+  height: 400px;
  }
 
- #public_about_main_item h4{
+ #public_top_main_item h4{
     margin: 20px 0;
  }
 
- #public_about_main_item_outer{
+ #public_top_main_item_outer{
     display: flex;
  }
 
- #public_about_main_item_outer div{
+ #public_top_main_item_outer div{
    width: 25%;
  }
 
- #public_about_main_item_all{
-    text-align: right;
+ #public_top_main_item_all{
+   text-align: right;
+ }
+
+ #public_homes_about_h1{
+   text-align: center;
+   font-size: 60px;
+   margin: 30px auto;
+ }
+
+ #public_homes_about_p{
+   text-align: center;
+   font-size: 20px;
+ }
+
+ #public_homes_about_image{
+    text-align: center;
  }
