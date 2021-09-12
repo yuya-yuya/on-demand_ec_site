@@ -84,3 +84,67 @@
     display: flex;
     justify-content: space-between;
 }
+
+#public_customer_login_wrap{
+    width: 100%;
+}
+
+#public_customer_login_h2_wrap{
+    width: 70%;
+    margin: 30px auto 20px;
+}
+
+#public_customer_login_h2_wrap h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#public_customer_login_main_wrap{
+    width: 65%;
+    margin: 0 auto;
+}
+
+#public_customer_login_main_wrap_inside{
+    width: 100%;
+}
+
+#public_customer_login_main_wrap h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: lightgray;
+}
+
+#public_customer_login_main_wrap table{
+    width: 80%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: block;
+    margin: 30px auto 0;
+}
+
+#public_customer_login_main_wrap table th,td{
+    padding: 5px 20px;
+}
+
+#public_customer_login_main_submit{
+    display: inline;
+}
+
+#public_customer_login_main_remember{
+    display: inline;
+    margin-left: 40px;
+}
+
+#public_customer_login_sub_wrap{
+    margin-top: 40px;
+} 
+
+#public_customer_login_sub_wrap p{
+    margin-left: 100px;
+    margin-top: 30px;
+}

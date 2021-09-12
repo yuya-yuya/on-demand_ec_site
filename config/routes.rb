@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get 'thanks' => 'orders#thanks'
     get 'confirm' => 'orders#confirm'
     post 'confirm' => 'orders#confirm'
+    get 'search' => 'searches#top'
   end
   
   devise_for :admins
