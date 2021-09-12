@@ -12,6 +12,7 @@ class Admin::SearchesController < ApplicationController
               @customers = Customer.where(['name LIKE ?', "%#{params[:search]}%"])
           end
           render "admin/customers/index"
+          #rebderを使うことでコントローラーを経由させない。コントローラーを経由すると変数が変わる。   
       elsif params[:model] == "item"
           if params[:how] == "0"
               @items = Item.where("name LIKE ?", "#{params[:search]}")
