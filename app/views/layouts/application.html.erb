@@ -60,19 +60,23 @@
             <%= image_tag 'movie.png', :size =>'150x80' %>
           <% end %>
         </div>
-        <ul id="header-list">
-          <li><%= link_to "about", about_path, class: "btn btn-outline-secondary" %></li>
-          <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>
-          <li><%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary" %></li>
-          <li><%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary" %></li>
-        </ul>
-      </div>
-      <div>
-        <%= form_with url: search_path, method: :get, local:true do |f| %>
-          <%= f.text_field :search %>
-          <%= f.select :how , options_for_select({完全一致: :"0",前方一致: :"1",後方一致: :"2",部分一致: :"3" })%>
-          <%= f.submit 'Search'%>
-        <% end %>
+        <div>
+          <ul id="header-list">
+            <li><%= link_to "about", about_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "商品一覧", items_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "新規登録", new_customer_registration_path, class: "btn btn-outline-secondary" %></li>
+            <li><%= link_to "ログイン", new_customer_session_path, class: "btn btn-outline-secondary" %></li>
+          </ul>
+          <div id="header_search">
+            <%= form_with url: search_path, method: :get, local:true do |f| %>
+              <div>
+              <%= f.text_field :search %>
+              <%= f.select :how , options_for_select({完全一致: :"0",前方一致: :"1",後方一致: :"2",部分一致: :"3" })%>
+              <%= f.submit 'Search'%>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
       <hr>
     <% end %>
