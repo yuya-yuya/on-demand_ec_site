@@ -8,34 +8,40 @@
       <%= render "publics/shared/error_messages", resource: resource %>
       <table id="public_registration_new_table_wrap">
         <tr>
-          <th>名前</th>
+          <th class="public_registration_new_table_th">
+            <p>名前</p>
+            <div id="public_registration_new_table_div">
+            </div>
+          </th>
           <td>
-            <%= f.text_field :first_name %>
-            <%= f.text_field :last_name %>
+            <%= f.text_field :first_name, :placeholder => "令和", class: "public_registration_new_table_th" %>
+            <%= f.text_field :last_name , :placeholder => "道子"%>
           </td>
         </tr>
         <tr>
-          <th>フリガナ </th>
+          <th>
+            フリガナ 
+          </th>
           <td>
-            <%= f.text_field :first_name_kana %>
-            <%= f.text_field :last_name_kana %>
+            <%= f.text_field :first_name_kana, :placeholder => "レイワ", class: "public_registration_new_table_th" %>
+            <%= f.text_field :last_name_kana, :placeholder => "ミチコ" %>
           </td>
         </tr>
         <tr>
           <th>メールアドレス</th>
-          <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+          <td><%= f.email_field :email, autofocus: true, autocomplete: "email" , :placeholder => "sample@sample.com"%></td>
         </tr>
         <tr>
           <th>郵便番号(ハイフンなし)</th>
-          <td><%= f.text_field :postcode %></td>
+          <td><%= f.text_field :postcode, :placeholder => "0000000" %></td>
         </tr>
         <tr>
           <th>住所</th>
-          <td><%= f.text_field :address, autofocus: true, autocomplete: "email", :size=>"60" %></td>
+          <td><%= f.text_field :address, autofocus: true, autocomplete: "email", :size=>"60", :placeholder => "東京都渋谷区代々木神南0-0" %></td>
         </tr>
         <tr>
           <th>電話番号(ハイフンなし)</th>
-          <td><%= f.text_field :phone_number, autofocus: true, autocomplete: "email" %></td>
+          <td><%= f.text_field :phone_number, autofocus: true, :placeholder => "00000000000" %></td>
         </tr>
         <tr>
           <th>パスワード(6文字以上)</th>
@@ -52,12 +58,17 @@
         <tr>
           <th></th>
           <td>
-            <%= f.submit "新規登録", class: "btn btn-success" %>
+            <%= f.submit "新規登録", class: "btn btn-success public_registration_new_submit " %>
           </td>
         </tr>
       </table>
     <% end %>
   </div>
+
+  <div id="public_registration_new_h2_wrap">
+    <h2>既に登録済みの方</h2>
+    <p id="public_registration_new_h2_wrap_p"><%= link_to "こちら", new_customer_session_path %> から新規登録を行ってください。</p>
+  </div>
 </div>
 
-<%= render "publics/shared/links" %>
+<%#= render "publics/shared/links" %>

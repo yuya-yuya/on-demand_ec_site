@@ -148,3 +148,37 @@
     margin-left: 100px;
     margin-top: 30px;
 }
+
+#public_customer_edit_wrap{
+    width: 100%;
+}
+
+#public_customer_edit_h2_wrap{
+    width: 70%;
+    margin: 30px auto 20px;
+}
+
+#public_customer_edit_h2_wrap h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#public_customer_edit_table_wrap{
+    width: 80%;
+    margin: 30px auto 20px;
+}
+
+.public_customer_edit_table_td{
+    margin-right: 60px;
+}
+
+.public_customer_edit_submit{
+    width: 220px;
+}
+
+.public_customer_edit_delete{
+    width: 100px;
+}
