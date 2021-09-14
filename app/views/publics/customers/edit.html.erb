@@ -1,45 +1,56 @@
-<h2>会員情報編集</h2>
+<div id="public_customer_edit_wrap">
+  <div id="public_customer_edit_h2_wrap">
+    <h2>会員情報編集</h2>
+  </div>
 
-  <%= form_with model:@customer, url: update_path, local:true do |f| %>
-  <%= flash[:error]%>
-    
-    <table>
+  <div id="public_customer_edit_table_wrap">
+    <%= form_with model:@customer, url: update_path, local:true do |f| %>
+    <%= flash[:error]%>
+      
+      <table>
+        <tr>
+          <th><%= f.label :氏名 %></th>
+          <td>
+            <%= f.text_field :first_name, class: "public_customer_edit_table_td" %>
+            <%= f.text_field :last_name %></td>
+        </tr>
+      
       <tr>
-        <th><%= f.label :氏名 %></th>
-        <td><%= f.text_field :first_name %><%= f.text_field :last_name %></td>
+        <th><%= f.label :フリガナ  %></th>
+        <td>
+          <%= f.text_field :first_name_kana, class: "public_customer_edit_table_td" %>
+          <%= f.text_field :last_name_kana %>
+        </td>
       </tr>
-    
-    <tr>
-      <th><%= f.label :フリガナ  %></th>
-      <td><%= f.text_field :first_name_kana %><%= f.text_field :last_name_kana %></td>
-    </tr>
-    
-    <tr>
-      <th><%= f.label :郵便番号 %></th>
-      <td><%= f.text_field :postcode %></td>
-    </tr>
-    
-    <tr>
-      <th><%= f.label :住所 %></th>
-      <td><%= f.text_field :address, autofocus: true, autocomplete: "email" %></td>
-    </tr>
-  
-   <tr>
-      <th><%= f.label :電話番号 %></th>
-      <td><%= f.text_field :phone_number, autofocus: true, autocomplete: "email" %><td>
-    </tr>
-  
-    <tr>
-      <th><%= f.label :メールアドレス %></th>
-      <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
-    </tr>
-    
-    <tr>
-      <th></th>
-      <td><%= f.submit "編集内容を保存" %></td>
-      <td><%= link_to "退会する", unsubscribed_path, class: "btn btn-danger" %></td>
-    </tr>
-    </table>
-  <% end %>
+      
+      <tr>
+        <th><%= f.label :郵便番号 %></th>
+        <td><%= f.text_field :postcode %></td>
+      </tr>
+      
+      <tr>
+        <th><%= f.label :住所 %></th>
+        <td><%= f.text_field :address, autofocus: true, autocomplete: "email", :size=>"60" %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :電話番号 %></th>
+        <td><%= f.text_field :phone_number, autofocus: true, autocomplete: "email" %><td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :メールアドレス %></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+      </tr>
+      
+      <tr>
+        <th></th>
+        <td><%= f.submit "編集内容を保存", class: "btn btn-success public_customer_edit_submit"%></td>
+        <td><%= link_to "退会する", unsubscribed_path, class: "btn btn-danger public_customer_edit_delete" %></td>
+      </tr>
+      </table>
+    <% end %>
+  </div>
+</div>
 
 <%#= link_to "退会する", data: { confirm: "本当に策書しますか？" }, method: :delete %>
