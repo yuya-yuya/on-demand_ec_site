@@ -1,3 +1,94 @@
 // Place all the styles related to the publics/orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#public_order_index_wrap{
+  width: 100%;
+}
+
+#public_order_index_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#public_order_index_h2_wrap h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#public_order_index_table_wrap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#public_order_index_table_wrap table{
+  width: 100%;
+}
+
+#public_order_index_table_wrap th{
+  background-color: lightgray;
+}
+
+#public_order_show_warp{
+  width: 100%;
+}
+
+#public_order_show_h2_warp{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#public_order_show_h2_warp h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#public_order_show_upper_table{
+  display: flex;
+  width: 80%;
+  margin: 30px auto 20px;
+}
+
+#public_order_show_upper_left_table{
+  width: 60%;
+  margin-right: 20px;
+}
+
+#public_order_show_first_table{
+  width: 100%;
+}
+
+#public_order_show_first_table th{
+  background-color: lightgray;
+}
+
+#public_order_show_upper_right_table{
+  width: 30%;
+}
+
+#public_order_show_second_table{
+  width: 100%;
+}
+
+#public_order_show_second_table th{
+  background-color: lightgray;
+}
+
+#public_order_show_lowwer_table{
+  width: 80%;
+  margin: 60px auto 0;
+}
+
+#public_order_show_third_table{
+  width: 80%;
+}
+
+#public_order_show_third_table th{
+  background-color: lightgray;
+}
