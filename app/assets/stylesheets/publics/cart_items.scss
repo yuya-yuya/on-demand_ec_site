@@ -1,64 +1,68 @@
 // Place all the styles related to the publics/CartItems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#cart_item_index_wrap{
+
+#public_cartitem_index_wrap{
     width: 100%;
 }
 
-#cart_item_index_wrap div{
+#public_cartitem_index_h2_wrap{
+    width: 70%;
+    margin: 30px auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#public_cartitem_index_h2_wrap h2{
+    display: inline;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: lightgray;
+}
+
+#public_cartitem_index_h2_wrap p{
+    display: inline-block;
+    text-align: right;
+}
+
+#public_cartitem_index_table_wrap{
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+#public_cartitem_index_table_wrap table{
+    width: 100%;
+}
+
+#public_cartitem_index_table_wrap table th{
+    background-color: lightgray;
+}
+
+#public_cartitem_index_inside_lowwer_wrap{
+    width: 80%;
+    margin: 30px auto 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#public_cartitem_index_inside_lowwer_continue{
+    margin-left: 70px;
+}
+
+#public_cartitem_index_inside_lowwer_table{
+    width: 20%;
+}
+
+#public_cartitem_index_inside_lowwer_table th{
+    background-color: lightgray;
+}
+
+#public_cartitem_index_infoinput{
     width: 80%;
     margin: 0 auto;
 }
 
-#cart_item_index_title{
-    font-size: 20px;
-    background-color: lightgray;
-    border-radius: 5px;
-    display: inline;
-    padding: 0 20px;
-}
-
-#cart_item_index_delete_all{
-    text-align: right;
-}
-
-#cart_item_index_wrap table{
-    display: block;
-    width: 100%; 
-}
-
-#cart_item_index_wrap thead{
-    display: block;
-    width: 100%; 
-}
-
-#cart_item_index_wrap tr{
-    display: block;
-    width: 100%; 
-}
-
-#cart_item_index_sum{
-    display: block;
-    width: 30%;
-}
-
-#cart_item_index_sum tbody{
-    display: block;
-    width: 100%;
-}
-
-#cart_item_index_sum th{
-    background-color: lightgray;
-    padding: 10px 0;
-    width: 50%;
-}
-
-#cart_item_index_sum td{
-    padding: 10px 0;
-    width: 50%;
-}
-
-#cart_item_index_input{
+#public_cartitem_index_infoinput p{
     text-align: center;
 }
-

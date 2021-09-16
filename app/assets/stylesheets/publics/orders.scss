@@ -2,6 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#public_order_new_wrap{
+  width: 100%;
+}
+
+#public_order_new_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#public_order_new_h2_wrap h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#public_order_new_table_wrap{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#public_order_new_table_payment_wrap{
+  margin-bottom: 30px;
+}
+
+#public_order_new_table_payment_wrap div{
+  margin-left: 50px;
+}
+
+#public_order_new_table_delivery_inside_wrap{
+  margin-left: 50px;
+}
+
+#public_order_new_table_delivery_inside_wrap div div{
+  margin-left: 50px;
+}
+
+#public_order_new_table_submit{
+  text-align: center;
+}
+
+.public_order_new_table_submit_width{
+  width: 200px;
+}
+
 #public_order_index_wrap{
   width: 100%;
 }
