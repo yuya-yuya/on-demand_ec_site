@@ -49,3 +49,42 @@
 #public_item_index_table tr{
     width: 22%;
 }
+
+#public_item_show_wrap{
+    width: 100%;
+}
+
+#public_item_show_inside_wrap{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#public_item_show_search_wrap{
+    width: 20%;
+    padding: 20px;
+}
+
+#public_item_show_search_wrap p{
+    text-align: center;
+    border: 1px solid black;
+}
+
+#public_item_show_search_wrap div{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#public_item_show_main_wrap{
+    width: 80%;
+    padding: 20px;
+    display: flex;
+}
+
+#public_item_show_main_attachment_wrap{
+    width: 40%;
+}
+
+#public_item_show_main_desc_wrap{
+    width: 60%;
+}
