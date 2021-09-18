@@ -14,7 +14,6 @@
 #public_item_index_genre{
     width: 20%;
     padding: 20px;
-    border: 1px solid black;
 }
 
 #public_item_index_genre h4{
@@ -42,12 +41,21 @@
 }
 
 #public_item_index_table_tbody{
-    display: flex;
     width: 100%;
 }
 
 #public_item_index_table tr{
     width: 22%;
+    float: left;
+    margin-bottom: 50px;
+}
+
+#public_item_index_table tr:nth-child(5){
+    clear: both;
+}
+
+#public_item_index_table_p{
+    margin: 10px 0;
 }
 
 #public_item_show_wrap{
@@ -87,4 +95,25 @@
 
 #public_item_show_main_desc_wrap{
     width: 60%;
+}
+
+#public_item_show_main_desc_wrap h3{
+    margin-bottom: 20px;
+}
+
+#public_item_show_main_desc_intro{
+    margin-bottom: 60px;
+}
+
+#public_item_show_main_desc_price{
+    margin-bottom: 30px;
+}
+
+
+.public_item_show_main_desc_number{
+    width: 120px;
+}
+
+.public_item_show_main_desc_submit{
+    margin-left: 80px;
 }
