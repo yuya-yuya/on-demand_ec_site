@@ -1,11 +1,16 @@
 <div id="public_item_index_wrap">
     <div id="public_item_index_inside_wrap">
         <div id="public_item_index_genre">
-            <h4>test</h4>
+            <p>ジャンル検索</p>
+            <div>
+                <% @genres.each do |genre| %>
+                    <%= genre.name %><br>
+                <% end %>
+            </div>
         </div>
         <div id="public_item_index_main">
             <div>
-                <h2>商品一覧</h2>
+                <h2><b>商品一覧</b></h2>
                 <p>(全<%= @items.count %>件)</p>
             </div>
             <table id="public_item_index_table">
@@ -13,17 +18,16 @@
                     <% @items.each do |item| %>
                         <tr>
                             <td>
-                                <%= attachment_image_tag item, :image, format: 'jpeg' %>
+                                <%= attachment_image_tag item, :image, :fill, 170, 100, format: 'jpeg' %>
                                     <% if customer_signed_in? %>
                                         <%= link_to item_path(item.id) do %>
-                                            <%= item.name %>
+                                            <p id="public_item_index_table_p">
+                                                <%= item.name %>
+                                            </p>
                                         <% end %>
                                     <% else %>
                                         <%= item.name %>
                                     <% end %>
-                                <div>
-                                    <%= item.genre.name %>
-                                </div>
                                 <div>
                                     <b>￥<%= item.price %></b>
                                 </div>

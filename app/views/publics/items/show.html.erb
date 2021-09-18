@@ -11,20 +11,20 @@
 
         <div id="public_item_show_main_wrap">
             <div id="public_item_show_main_attachment_wrap">
-                <%= attachment_image_tag @item, :image, format: 'jpeg' %>
+                <%= attachment_image_tag @item, :image, :fill, 220, 170, format: 'jpeg' %>
             </div>
             <div id="public_item_show_main_desc_wrap">
                 <h3><b><%= @item.name %></b></h3>
-                <p><%= @item.introduction %></p>
-                <h4><b>￥<%= (@item.price * 1.1).floor %></b>(税込)</h4>
+                <p id="public_item_show_main_desc_intro"><%= @item.introduction %></p>
+                <h4 id="public_item_show_main_desc_price"><b>￥<%= (@item.price * 1.1).floor %></b>(税込)</h4>
                 <%#= f.number_field %>
                 <%= form_with model:@cart_item, url: cart_items_path, local:true do |f| %>
                     <%= f.hidden_field :customer_id, :value => current_customer.id %>
                     <%= f.hidden_field :item_id, :value => @item.id %>
-                    <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20 %>
+                    <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20, class: "public_item_show_main_desc_number" %>
                     <%#= f.number_field :メソッド(送りたいカラム), placeholder: "",  min: 最小値, max: 最大値 %>
                     <!--数値を送る方法-->
-                    <%= f.submit "カートに入れる", class: "btn btn-success" %>
+                    <%= f.submit "カートに入れる", class: "btn btn-success  public_item_show_main_desc_submit" %>
                 <% end %>
             </div>
         </div>
