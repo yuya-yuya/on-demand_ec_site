@@ -1,0 +1,64 @@
+<div id="admin_customer_edit_wrap">
+  <div id="admin_customer_edit_h2_wrap">
+    <h2>
+      <%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集
+    </h2>
+  </div>
+
+  <div id="admin_customer_edit_table_wrap">
+    <%= form_with model:@customer, url: admin_customer_path, local:true do |f| %>
+    <%= flash[:error]%>
+      
+      <table>
+        <tr>
+          <th><%= f.label :氏名 %></th>
+          <td>
+            <%= f.text_field :last_name, class: "admin_customer_edit_td" %>
+            <%= f.text_field :first_name %>
+          </td>
+        </tr>
+      
+      <tr>
+        <th><%= f.label :フリガナ  %></th>
+        <td>
+          <%= f.text_field :last_name_kana, class: "admin_customer_edit_td" %>
+          <%= f.text_field :first_name_kana %>
+        </td>
+      </tr>
+      
+      <tr>
+        <th><%= f.label :郵便番号 %></th>
+        <td><%= f.text_field :postcode %></td>
+      </tr>
+      
+      <tr>
+        <th><%= f.label :住所 %></th>
+        <td><%= f.text_field :address, autofocus: true, autocomplete: "email", :size=>"60" %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :電話番号 %></th>
+        <td><%= f.text_field :phone_number, autofocus: true, autocomplete: "email" %><td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :メールアドレス %></th>
+        <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+      </tr>
+
+      <tr>
+        <th><%= f.label :会員ステータス %></th>
+        <td>
+          <p class="admin_customer_edit_status"><%= f.radio_button :is_subscribed, 1 %><span>有効</span></p>
+          <p class="admin_customer_edit_status"><%= f.radio_button :is_subscribed, 0 %>無効</p>
+        </td>
+      </tr>
+      
+      <tr>
+        <th></th>
+        <td><%= f.submit "変更を保存", class: "btn btn-success public_customer_edit_submit"%></td>
+      </tr>
+      </table>
+    <% end %>
+  </div>
+</div>
