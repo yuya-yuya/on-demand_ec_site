@@ -16,7 +16,7 @@
             <table id="public_item_index_table">
                 <tbody id="public_item_index_table_tbody">
                     <% @items.each do |item| %>
-                        <tr>
+                        <tr id="public_item_index_table_tbody_tr">
                             <td>
                                 <%= attachment_image_tag item, :image, :fill, 170, 100, format: 'jpeg' %>
                                     <% if customer_signed_in? %>
@@ -40,3 +40,4 @@
     </div>
 <div>
  
+<script src="public_index.js"></script>

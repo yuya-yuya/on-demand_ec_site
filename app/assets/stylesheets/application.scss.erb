@@ -97,9 +97,22 @@
 
  #public_top_main_intro{
   background-size: cover;
+  position: relative;
   background-image: url("<%= asset_path('cake2.jpg') %>");
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
   text-align: center;
   height: 400px;
+ }
+
+ #public_top_main_intro p{
+   position: absolute;
+   font-size: 18px;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%,-50%);
+   -webkit-transform: translate(-50%,-50%);
+   transform: translate(-50%,-50%);
  }
 
  #public_top_main_item h4{
