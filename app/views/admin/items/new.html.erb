@@ -14,12 +14,12 @@
         
         <tr>
           <th><%= f.label :商品名  %></th>
-          <td><%= f.text_field :name %></td>
+          <td><%= f.text_field :name, size: 30 %></td>
         </tr>
         
         <tr>
           <th><%= f.label :商品説明 %></th>
-          <td><%= f.text_field :introduction %></td>
+          <td><%= f.text_field :introduction, size: "40x60" %></td>
         </tr>
         
         <tr>
@@ -30,13 +30,13 @@
       
       <tr>
           <th><%= f.label :税抜き価格 %></th>
-          <td><%= f.text_field :price %><td>
+          <td><%= f.text_field :price, size: 30 %><td>
         </tr>
       
         <tr>
-          <th><%= f.label :販売ステータス, '下書き' %></th>
+          <th><%= f.label :販売ステータス %></th>
           <td>
-              <label><%= f.radio_button :is_active, "販売中" %>販売中</label>
+              <label><%= f.radio_button :is_active, "販売中" %><span id="admin_item_new_table_span">販売中</span></label>
               <label><%= f.radio_button :is_active, "販売停止" %>販売停止</label>
               <%#= f.radio_button :カラム名, 送りたい値 %>
           </td>
