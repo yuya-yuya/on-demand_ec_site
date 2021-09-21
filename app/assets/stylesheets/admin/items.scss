@@ -55,6 +55,37 @@
 }
 
 #admin_item_new_table_wrap{
-  width: 25%;
+  width: 55%;
   margin: 0 auto;
+}
+
+#admin_item_new_table_span{
+  margin-right: 30px;
+}
+
+#admin_item_show_wrap{
+  width: 100%;
+}
+
+#admin_item_show_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#admin_item_show_h2_wrap h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#admin_item_show_main_wrap{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+#admin_item_show_main_left_wrap{
+  margin-right: 60px;
 }

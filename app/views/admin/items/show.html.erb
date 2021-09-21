@@ -1,1 +1,36 @@
-itemのsyhow
+<div id="admin_item_show_wrap">
+  <div id="admin_item_show_h2_wrap">
+    <h2>商品詳細</h2>
+  </div>
+
+  <div id="admin_item_show_main_wrap">
+    <div id="admin_item_show_main_left_wrap">
+      <%= attachment_image_tag @item, :image, :fill, 220, 150, format: 'jpeg' %>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>商品名</th>
+          <td><%= @item.name%></td>
+        </tr>
+        <tr>
+          <th>商品説明</th>
+          <td><%= @item.introduction %></td>
+        </tr>
+        <tr>
+          <th>ジャンル</th>
+          <td><%= @item.genre.name %></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td><%= @item.price %></td>
+        </tr>
+        <tr>
+          <th>販売ステータス</th>
+          <td><%= @item.is_active %></td>
+        </tr>
+      </table>
+      <%= link_to "編集する"%>
+    </div>
+  </div>
+</div>
