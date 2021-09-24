@@ -12,6 +12,11 @@ class Admin::ItemsController < ApplicationController
          @genres = Genre.all
     end
     
+    def edit
+        @item = Item.find(params[:id])
+        @genres = Genre.all
+    end
+   
     def create
         @item = Item.new(item_params)
         @genres = Genre.all
@@ -21,6 +26,12 @@ class Admin::ItemsController < ApplicationController
             flash[:error] = '必須項目を入力してください'
             render :new
         end
+    end
+
+    def update
+        @item = Item.find(params[:id])
+        @item.update(item_params)
+        redirect_to admin_items_path
     end
     
     private

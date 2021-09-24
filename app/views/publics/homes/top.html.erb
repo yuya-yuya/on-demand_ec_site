@@ -6,7 +6,11 @@
       <h4>ジャンル検索</h4>
       <div>
         <% @genres.each do |genre| %>
-          <p><%= genre.name %></p><br>
+          <p>
+            <%= link_to search_path(order_sort: 0, search: genre.id) do %>
+              <%= genre.name %>
+            <% end %>
+          </p><br>
         <% end %>
       </div>
     </div>
