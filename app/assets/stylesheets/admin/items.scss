@@ -89,3 +89,31 @@
 #admin_item_show_main_left_wrap{
   margin-right: 60px;
 }
+
+.admin_item_show_submit{
+  margin-left: 60px;
+  margin-top: 20px;
+  width: 140px;
+}
+
+#admin_item_edit_wrap{
+  width: 100%;
+}
+
+#admin_item_edit_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#admin_item_edit_h2_wrap h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+}
+
+#admin_item_edit_table_submit{
+  margin: 0 auto;
+  width: 50%;
+}

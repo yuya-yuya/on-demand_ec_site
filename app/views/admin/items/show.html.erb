@@ -22,15 +22,18 @@
           <td><%= @item.genre.name %></td>
         </tr>
         <tr>
-          <th></th>
-          <td><%= @item.price %></td>
+          <th>
+            税込価格<br>
+            (税込価格)
+          </th>
+          <td><%= ((@item.price) * 1.1).floor %> (<%= @item.price %>) 円</td>
         </tr>
         <tr>
           <th>販売ステータス</th>
           <td><%= @item.is_active %></td>
         </tr>
       </table>
-      <%= link_to "編集する"%>
+      <%= link_to "編集する", edit_admin_item_path(@item.id), class: "btn btn-success admin_item_show_submit" %>
     </div>
   </div>
 </div>
