@@ -20,7 +20,11 @@ Rails.application.routes.draw do
     get 'search' => 'searches#top'
   end
   
-  devise_for :admins
+  devise_for :admins, :controllers => {
+    :sessions => 'admin/sessions',
+    :passwords => 'admin/passwords',
+    :registrations => 'admin/registrations'
+    }
   
   namespace :admin do
     root to: 'homes#top'

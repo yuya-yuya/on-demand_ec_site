@@ -1,4 +1,6 @@
 class Publics::ItemsController < ApplicationController
+    PER = 8
+    
     def index
         @items = Item.all
         @genres = Genre.all
