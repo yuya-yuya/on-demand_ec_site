@@ -26,7 +26,11 @@
                         <%= customer.email %>
                     </td>
                     <td>
-                        <%= customer.is_subscribed %>
+                        <% if customer.is_subscribed == "有効" %>
+                            <p id="admin_customer_index_issubscribed"><%= customer.is_subscribed %></p>
+                        <% else %>
+                            <p><%= customer.is_subscribed %></p>
+                        <% end %>
                     </td>
                 </tr>
             <% end %>

@@ -23,6 +23,15 @@
   margin: 0 auto;
 }
 
+#admin_customer_index_wrap tr{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+#admin_customer_index_issubscribed{
+  color: green;
+}
+
 #admin_customer_show_wrap{
   width: 100%;
 }
@@ -47,6 +56,10 @@
 
 .admin_customer_show_table_edit_button{
   margin-right: 40px;
+}
+
+#admin_customer_show_issubscribed{
+  color: green;
 }
 
 #admin_customer_edit_wrap{

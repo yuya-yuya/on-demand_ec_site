@@ -1,3 +1,30 @@
 // Place all the styles related to the admin/homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#admin_session_new_wrap{
+  width: 100%;
+}
+
+#admin_session_new_h2_wrap{
+  width: 70%;
+  margin: 30px auto 20px;
+}
+
+#admin_session_new_h2_wrap h2{
+  display: inline;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: lightgray;
+  vertical-align: middle;
+}
+
+#admin_session_new_main_wrap{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.admin_session_new_submit{
+  width: 170px;
+  margin-top: 20px;
+}

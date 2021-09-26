@@ -32,8 +32,17 @@
   margin: 0 auto;
 }
 
+#admin_item_index_table tr{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
 #admin_item_index_table td{
   padding: 10px;
+}
+
+#admin_item_index_table_onsell{
+  color: green;
 }
 
 #admin_item_new_wrap{
