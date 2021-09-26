@@ -28,7 +28,13 @@
                     </td>
                     <td><%= item.price %></td>
                     <td><%= item.genre.name %></td>
-                    <td><%= item.is_active %></td>
+                    <td>
+                        <% if item.is_active == "販売中"%>
+                            <p id="admin_item_index_table_onsell"><%= item.is_active %></p>
+                        <% else %>
+                            <p id="admin_item_index_table_offsell"><%= item.is_active %></p>
+                        <% end %>
+                    </td>
                 </tr>
             <% end %>
         </tbody>

@@ -37,7 +37,13 @@
       </tr>
       <tr>
         <th>会員ステータス</th>
-        <td><%= @customer.is_subscribed %></td>
+        <td>
+          <% if @customer.is_subscribed == "有効" %>
+              <p id="admin_customer_show_issubscribed"><%= @customer.is_subscribed %></p>
+          <% else %>
+              <p><%= @customer.is_subscribed %></p>
+          <% end %>
+        </td>
       </tr>
       <tr>
         <th></th>
