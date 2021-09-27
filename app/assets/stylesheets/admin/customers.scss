@@ -6,8 +6,8 @@
 }
 
 #admin_customer_index_h2_wrap{
-  width: 80%;
-  margin: 30px auto 10px;
+  width: 60%;
+  margin: 50px auto 10px;
 }
 
 #admin_customer_index_wrap h2{
@@ -26,6 +26,10 @@
 #admin_customer_index_wrap tr{
   border-bottom: 1px solid black;
   border-top: 1px solid black;
+}
+
+#admin_customer_index_wrap tbody td{
+  padding: 15px;
 }
 
 #admin_customer_index_issubscribed{
