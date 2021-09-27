@@ -3,10 +3,9 @@ class Admin::OrdersController < ApplicationController
         case params[:order_sort]
         when "0"
             @customer = Customer.find(params[:id])
-            @orders = @customer.orders
-            p @orders
+            @orders = @customer.orders.page(params[:page]).per(10)
         else
-            @orders = Order.all
+            @orders = Order.all.page(params[:page]).per(10)
         end
     end
     
