@@ -1,4 +1,4 @@
-FROM ruby:2.6.3
+FROM ruby:2.6.6
 
 RUN apt-get update && apt-get install -y sqlite3 nodejs build-essential libsqlite3-dev 
 
