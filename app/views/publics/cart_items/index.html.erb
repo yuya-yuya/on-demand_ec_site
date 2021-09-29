@@ -30,7 +30,7 @@
                         </td>
                         <td>
                             <%= form_with model:cart_item, url: cart_item_path(cart_item.id), local:true do |f| %>
-                                <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20 %>
+                                <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20, class: "public_cartitem_index_table_input" %>
                                 <%#= f.number_field :メソッド(送りたいカラム), placeholder: "",  min: 最小値, max: 最大値 %>
                                 <!--数値を送る方法-->
                                 <%= f.submit "変更", class: "btn btn-success" %>

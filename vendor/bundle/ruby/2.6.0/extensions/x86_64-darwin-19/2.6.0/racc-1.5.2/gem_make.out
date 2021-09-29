@@ -1,0 +1,16 @@
+current directory: /Users/yamadayuuwataru/Documents/GitHub/on-demand_ec_site-master/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/yamadayuuwataru/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamadayuuwataru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210929-42265-1t1y9kz.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/yamadayuuwataru/Documents/GitHub/on-demand_ec_site-master/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/yamadayuuwataru/Documents/GitHub/on-demand_ec_site-master/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/yamadayuuwataru/Documents/GitHub/on-demand_ec_site-master/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210929-42265-516os0/racc
