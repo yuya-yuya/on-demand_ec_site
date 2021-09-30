@@ -1,8 +1,7 @@
 require "refile/s3"
 
 aws = {
-  access_key_id: "AKIATGUNARVZVNDLHKFS",
-  secret_access_key: "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",
+  
   region: "ap-northeast-1",
   bucket: "nagano-cake",
 }
