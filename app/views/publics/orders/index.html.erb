@@ -28,7 +28,7 @@
               </td>
               <td><%= order.total_payment %>円</td>
               <td><%= order.status_i18n %></td>
-              <td><%= link_to "表示する", order_path(order.id), class: "btn btn-primary" %></td>
+              <td><%= link_to "表示", order_path(order.id), class: "btn btn-primary public_order_index_table_link" %></td>
             </tr>
           <% end %>
         </tbody>

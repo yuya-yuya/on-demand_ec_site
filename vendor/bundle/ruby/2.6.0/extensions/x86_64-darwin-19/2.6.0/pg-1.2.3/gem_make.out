@@ -1,5 +1,5 @@
 current directory: /Users/yamadayuuwataru/Documents/GitHub/on-demand_ec_site-master/vendor/bundle/ruby/2.6.0/gems/pg-1.2.3/ext
-/Users/yamadayuuwataru/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamadayuuwataru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210929-42265-1tafedp.rb extconf.rb
+/Users/yamadayuuwataru/.rbenv/versions/2.6.6/bin/ruby -I /Users/yamadayuuwataru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210930-61419-117yqhz.rb extconf.rb
 checking for pg_config... no
 No pg_config... trying anyway. If building fails, please try again with
  --with-pg-config=/path/to/pg_config

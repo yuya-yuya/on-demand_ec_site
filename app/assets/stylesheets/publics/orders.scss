@@ -78,6 +78,14 @@
   background-color: lightgray;
 }
 
+#public_order_index_table_wrap td{
+  background-color: white;
+}
+
+.public_order_index_table_link{
+  height: 40px;
+}
+
 #public_order_show_warp{
   width: 100%;
 }
@@ -99,6 +107,10 @@
   display: flex;
   width: 80%;
   margin: 30px auto 20px;
+}
+
+#public_order_show_upper_table td{
+  background-color: white;
 }
 
 #public_order_show_upper_left_table{
@@ -129,6 +141,10 @@
 #public_order_show_lowwer_table{
   width: 80%;
   margin: 60px auto 0;
+}
+
+#public_order_show_lowwer_table td{
+  background-color: white;
 }
 
 #public_order_show_third_table{
