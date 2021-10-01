@@ -31,7 +31,9 @@
           <% @items.each do |item| %>
             <div>
               <%= attachment_image_tag item, :image, :fill, 170, 100, format: 'jpeg' %>
-              <p><b><%= item.name %></b></p>
+              <%= link_to item_path(item.id) do %>
+                <p><b><%= item.name %></b></p>
+              <% end %>
               <p><b>¥<%= item.price %></b></p>
             </div>
           <% end %>
