@@ -30,12 +30,12 @@
   - S3(デプロイ時画像保存先)
 
 # Usage
-　- https://ec-site-cake.herokuapp.com/ にアクセス。
-　- 管理者側 
-　　- https://ec-site-cake.herokuapp.com/admins/sign_inにアクセス。
+  - https://ec-site-cake.herokuapp.com/ にアクセス。
+  - 管理者側 
+    - https://ec-site-cake.herokuapp.com/admins/sign_inにアクセス。
      - Mail: admin@admin
      - Password: password
-   - 顧客確認や商品追加や商品一覧の確認、注文一覧の確認をしてみてください。また、注文詳細画面にて、製作ステータスや注文ステータスの確認もしてみてください。
+    - 顧客確認や商品追加や商品一覧の確認、注文一覧の確認をしてみてください。また、注文詳細画面にて、製作ステータスや注文ステータスの確認もしてみてください。
   - カスタマー側
    - https://ec-site-cake.herokuapp.com/customers/sign_inにアクセス。
      - Mail: test@test
