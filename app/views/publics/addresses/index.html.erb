@@ -42,22 +42,18 @@
             <tbody>
                 <% @addresses.each do |address| %>
                     <tr>
-                        <td height="50">
+                        <td>
                             <%= address.postal_code %>
                         </td>
-                        <td height="50">
+                        <td>
                             <%= address.address %>
                         </td>
-                        <td height="50">
+                        <td>
                             <%= address.name %>
                         </td>
-                        <td id="public_addresses_index_secondtable_edit_delete" height="50">
-                            <div>
-                                <%= link_to "編集する", edit_address_path(address.id), class: "btn btn-success"%>
-                            </div>
-                            <div>
-                                <%= link_to "削除する", address_path(address.id), method: :delete, class: "btn btn-danger"%>
-                            </div>
+                        <td id="public_addresses_index_secondtable_edit_delete">
+                            <p><%= link_to "編集", edit_address_path(address.id), class: "btn btn-success"%></p>
+                            <p><%= link_to "削除", address_path(address.id), method: :delete, class: "btn btn-danger"%></p>
                         </td>
                     </tr>
                 <% end %>

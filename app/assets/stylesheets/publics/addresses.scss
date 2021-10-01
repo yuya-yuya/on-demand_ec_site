@@ -47,11 +47,11 @@
 }
 
 #public_addresses_index_secondtable th:nth-child(1){
-  width: 15%;
+  width: 10%;
 }
 
 #public_addresses_index_secondtable th:nth-child(2){
-  width: 40%;
+  width: 50%;
 }
 
 #public_addresses_index_secondtable th:nth-child(3){
@@ -59,12 +59,18 @@
 }
 
 #public_addresses_index_secondtable th:nth-child(4){
-  width: 30%;
+  width: 25%;
 }
 
 #public_addresses_index_secondtable_edit_delete{
   display: flex;
   justify-content: space-evenly;
+  border: none;
+  vertical-align: middle;
+}
+
+#public_addresses_index_secondtable_edit_delete p{
+  padding-top: 5px;
 }
 
 #public_addresses_index_secondtable td{
@@ -97,7 +103,7 @@
   width: 100%;
 }
 
-#public_addresses_edit_firsttable_td{
-  display: flex;
-  justify-content: space-between;
+#public_addresses_edit_firsttable_p{
+  text-align: center;
+  margin-top: 50px;
 }

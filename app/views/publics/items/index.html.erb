@@ -23,15 +23,11 @@
                         <tr id="public_item_index_table_tbody_tr">
                             <td>
                                 <%= attachment_image_tag item, :image, :fill, 170, 100, format: 'jpeg' %>
-                                    <% if customer_signed_in? %>
-                                        <%= link_to item_path(item.id) do %>
-                                            <p id="public_item_index_table_p">
-                                                <%= item.name %>
-                                            </p>
-                                        <% end %>
-                                    <% else %>
+                                <%= link_to item_path(item.id) do %>
+                                    <p id="public_item_index_table_p">
                                         <%= item.name %>
-                                    <% end %>
+                                    </p>
+                                <% end %>
                                 <div>
                                     <b>￥<%= item.price %></b>
                                 </div>

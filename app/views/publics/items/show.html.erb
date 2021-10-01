@@ -22,13 +22,15 @@
                 <p id="public_item_show_main_desc_intro"><%= @item.introduction %></p>
                 <h4 id="public_item_show_main_desc_price"><b>￥<%= (@item.price * 1.1).floor %></b>(税込)</h4>
                 <%#= f.number_field %>
-                <%= form_with model:@cart_item, url: cart_items_path, local:true do |f| %>
-                    <%= f.hidden_field :customer_id, :value => current_customer.id %>
-                    <%= f.hidden_field :item_id, :value => @item.id %>
-                    <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20, class: "public_item_show_main_desc_number" %>
-                    <%#= f.number_field :メソッド(送りたいカラム), placeholder: "",  min: 最小値, max: 最大値 %>
-                    <!--数値を送る方法-->
-                    <%= f.submit "カートに入れる", class: "btn btn-success  public_item_show_main_desc_submit" %>
+                <% if customer_signed_in? %>
+                    <%= form_with model:@cart_item, url: cart_items_path, local:true do |f| %>
+                        <%= f.hidden_field :customer_id, :value => current_customer.id %>
+                        <%= f.hidden_field :item_id, :value => @item.id %>
+                        <%= f.number_field :amount, placeholder: "個数選択",  min: 1, max: 20, class: "public_item_show_main_desc_number" %>
+                        <%#= f.number_field :メソッド(送りたいカラム), placeholder: "",  min: 最小値, max: 最大値 %>
+                        <!--数値を送る方法-->
+                        <%= f.submit "カートに入れる", class: "btn btn-success  public_item_show_main_desc_submit" %>
+                    <% end %>
                 <% end %>
             </div>
         </div>
