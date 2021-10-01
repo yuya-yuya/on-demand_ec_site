@@ -76,17 +76,15 @@ Features
 
 
 
-Dependency
-- PHP (>= 7.0)
-- Laravel 6.0
-- MySQL
-- Bootstrap
-- Heroku
+# Dependency
+  - Ruby '2.6.6'(言語)
+  - Ruby on Rails  '~> 5.2.6'(フレームワーク)
+  - Docker(開発環境)
+  - SQlite3(DB)
+  - Heroku(デプロイ)
+  - S3(デプロイ時画像保存先)
 
-
-
-
-## Usage
+# Usage
   - http://laravelmysql.herokuapp.com/ にアクセス
   - デモユーザーでログイン(ヘッダーのハンバーガメニューを開くとログインボタンがあるのでそこからログイン)
   - Mail: `test@test`
