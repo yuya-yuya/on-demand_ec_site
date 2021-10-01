@@ -1,7 +1,7 @@
 class Publics::SearchesController < ApplicationController
   def top
     if params[:order_sort] == "0"
-      @items = Item.where("genre_id LIKE ?", "#{params[:search]}")
+      @items = Item.where("genre_id LIKE ?", "#{params[:search]}").page(params[:page]).per(8)
       @genres = Genre.all
       render "publics/items/index"
     else
