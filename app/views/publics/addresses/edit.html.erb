@@ -17,16 +17,10 @@
                 </tr>
                 <tr>
                     <th><%= f.label :宛名 %></th>
-                    <td id="public_addresses_edit_firsttable_td">
-                        <div>
-                            <%= f.text_field :name, :placeholder => "令和道子" %>
-                        </div>
-                        <div>
-                            <%= f.submit "変更内容を保存", class: "btn btn-success"%>
-                        </div>
-                    </td>
+                    <th> <%= f.text_field :name, :placeholder => "令和道子" %></th>
                 </tr>
             </table>
+            <p id="public_addresses_edit_firsttable_p"><%= f.submit "変更内容を保存", class: "btn btn-success"%></p>
         <% end %>
     </div>
 </div>
