@@ -86,12 +86,12 @@ Dependency
 
 
 
-Usage
-- http://laravelmysql.herokuapp.com/ にアクセス
-- デモユーザーでログイン(ヘッダーのハンバーガメニューを開くとログインボタンがあるのでそこからログイン)
-- Mail: `test@test`
-- Password: `password`
-- また、管理者でログインするには http://laravelmysql.herokuapp.com/ にアクセスした後にurlに /admin/home をつけてログインページに遷移。
-- Mail: `test@test`
-- Password: `password`
--ユーザー側で新規投稿や投稿一覧やユーザー一覧を閲覧したり、管理者としてジャンルや都市名、ユーザー編集などをしてみてください。
+## Usage
+  - http://laravelmysql.herokuapp.com/ にアクセス
+  - デモユーザーでログイン(ヘッダーのハンバーガメニューを開くとログインボタンがあるのでそこからログイン)
+  - Mail: `test@test`
+  - Password: `password`
+  - また、管理者でログインするには http://laravelmysql.herokuapp.com/ にアクセスした後にurlに /admin/home をつけてログインページに遷移。
+  - Mail: `test@test`
+  - Password: `password`
+  -ユーザー側で新規投稿や投稿一覧やユーザー一覧を閲覧したり、管理者としてジャンルや都市名、ユーザー編集などをしてみてください。
