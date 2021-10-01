@@ -13,7 +13,7 @@ class Publics::SearchesController < ApplicationController
             @items = Item.where("name LIKE ?", "#{params[:search]}%").page(params[:page]).per(8)
             @genres = Genre.all
         elsif params[:how] == "2"
-            @items =I tem.where("name LIKE ?", "%#{params[:search]}").page(params[:page]).per(8)
+            @items =Item.where("name LIKE ?", "%#{params[:search]}").page(params[:page]).per(8)
             @genres = Genre.all
         else
             @items = Item.where(['name LIKE ?', "%#{params[:search]}%"]).page(params[:page]).per(8)
