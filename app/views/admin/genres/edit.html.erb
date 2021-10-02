@@ -3,7 +3,7 @@
         <h2>ジャンル編集</h2>
     </div>
     <div id="admin_genre_edit_main_div">
-        <%= flash[:error]%>
+        <p class="error_notice"><%= flash[:error] %></p>
         <%= form_with model:@genre, url: admin_genre_path, local:true do |f| %>
             <%= f.label :ジャンル名, class: "admin_genre_edit_main_input" %>
             <%= f.text_field :name, class: "admin_genre_edit_main_input" %>

@@ -5,7 +5,7 @@
 
   <div id="admin_item_new_table_wrap">
     <%= form_with model:@item, url: admin_items_path, local:true do |f| %>
-        <%= flash[:error] %>
+        <p class="error_notice"><%= flash[:error] %></p>
         <table>
           <tr>
             <th><%= f.label :商品画像 %></th>

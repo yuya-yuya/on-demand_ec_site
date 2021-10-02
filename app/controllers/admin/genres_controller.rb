@@ -7,7 +7,7 @@ class Admin::GenresController < ApplicationController
     def create
         @genre = Genre.new(genre_params)
         if @genre.save
-            flash[:success] = '作成しました'
+            flash[:notice] = '作成しました'
             redirect_to admin_genres_path
         else
             @genres = Genre.all
@@ -23,7 +23,7 @@ class Admin::GenresController < ApplicationController
     def update
         @genre = Genre.find(params[:id])
         if @genre.update(genre_params)
-            flash[:success] = '編集が完了しました'
+            flash[:notice] = '編集が完了しました'
             redirect_to admin_genres_path
         else
             flash[:error] = '必須項目を入力してください'

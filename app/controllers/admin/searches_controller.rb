@@ -27,7 +27,7 @@ class Admin::SearchesController < ApplicationController
       end
     else
       flash[:error] = "検索結果なし"
-      redirect_to admin_root_path
+      redirect_to admin_items_path
     end
   end
 end

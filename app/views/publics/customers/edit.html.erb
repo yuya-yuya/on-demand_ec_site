@@ -3,9 +3,10 @@
     <h2>会員情報編集</h2>
   </div>
 
+  <p class="error_notice"><%= flash[:error] %></p>
+
   <div id="public_customer_edit_table_wrap">
     <%= form_with model:@customer, url: update_path, local:true do |f| %>
-    <%= flash[:error]%>
       
       <table>
         <tr>

@@ -3,6 +3,8 @@
     <h2>管理者ログイン</h2>
   </div>
 
+  <p class="error_notice"><%= flash[:notice] %></p>
+
   <div id="admin_session_new_main_wrap">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <table>

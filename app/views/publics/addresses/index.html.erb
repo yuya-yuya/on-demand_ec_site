@@ -5,8 +5,8 @@
 
     <div id="public_addresses_index_table_wrap">
         <%= form_with model:@address, url: addresses_path, local:true do |f| %>
-            <%= flash[:error] %>
-            <%= flash[:delete] %>
+            <p class="sucess_noice"><%= flash[:notice] %></p>
+            <p class="error_notice"><%= flash[:error] %></p>
             <table id="public_addresses_index_firsttable">
                 <tr>
                     <th><%= f.label :郵便番号（ハイフンなし） %></th>

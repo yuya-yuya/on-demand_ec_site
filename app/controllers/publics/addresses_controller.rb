@@ -9,6 +9,7 @@ class Publics::AddressesController < ApplicationController
         address.customer_id = current_customer.id
         @addresses = Address.all
         if address.save
+            flash[:notice] = "住所を新規登録しました。"
             redirect_to addresses_path
         else
             flash[:error] = "必須項目を記入してください。"
@@ -23,6 +24,7 @@ class Publics::AddressesController < ApplicationController
     def update
         @address = Address.find(params[:id])
         if @address.update(addresses_params)
+            flash[:notice] = "住所を変更しました。"
             redirect_to addresses_path
         else
             flash[:error] = "必須項目を記入してください。"
@@ -33,7 +35,7 @@ class Publics::AddressesController < ApplicationController
     def destroy
         address = Address.find(params[:id])
         address.destroy
-        flash[:delete] = "削除しました。"
+        flash[:error] = "削除しました。"
         redirect_to addresses_path
     end
     

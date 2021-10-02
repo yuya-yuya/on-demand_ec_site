@@ -12,6 +12,7 @@ class Publics::CustomersController < ApplicationController
     def update
         @customer = current_customer
         if @customer.update(custmer_params)
+         flash[:notice] = "プロフィールを更新しました。"
          redirect_to show_path
         else
          flash[:error] = "必須項目を記入してください。"

@@ -7,7 +7,7 @@
 
   <div id="admin_customer_edit_table_wrap">
     <%= form_with model:@customer, url: admin_customer_path, local:true do |f| %>
-    <%= flash[:error]%>
+    <p class="error_notice"><%= flash[:error] %></p>
       
       <table>
         <tr>
