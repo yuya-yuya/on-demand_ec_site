@@ -52755,3 +52755,1478 @@ Started GET "/attachments/de374dd2a4ac81655a6f005af37c90a69a320790/store/fill/22
 Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2021-10-01 08:04:01 +0000] GET "/de374dd2a4ac81655a6f005af37c90a69a320790/store/fill/220/170/d06aac87ce66ff69bf83b8bb307720b1a427baff241222340fc24b927221/image.jpeg" 200 681.9ms
 
+Started GET "/" for 172.27.0.1 at 2021-10-02 05:25:46 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Publics::HomesController#top as HTML
+  Rendering publics/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (3.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/homes/top.html.erb:8
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/publics/homes/top.html.erb:31
+  Rendered publics/homes/top.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 12686ms (Views: 12484.4ms | ActiveRecord: 29.4ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:26:04 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (1282.5ms)
+Completed 200 OK in 1908ms (Views: 1861.3ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:26:06 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/search?order_sort=0&search=3" for 172.27.0.1 at 2021-10-02 05:26:09 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SearchesController#top as HTML
+  Parameters: {"order_sort"=>"0", "search"=>"3"}
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" WHERE (cast(genre_id as text) LIKE '3') LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (cast(genre_id as text) LIKE '3') LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  Rendered publics/items/index.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 566ms (Views: 558.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:26:09 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/customers/sign_in" for 172.27.0.1 at 2021-10-02 05:26:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#new as HTML
+  Rendering publics/sessions/new.html.erb within layouts/application
+  Rendered publics/sessions/new.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 682ms (Views: 650.7ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/customers/sign_in" for 172.27.0.1 at 2021-10-02 05:26:14 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kzbct26O4dm8w430vQ1fQWrsu2JS2uDIAox/a02B1/dy1WbVuLviLzsNEP9eI3HCYnobZqnvKAxGppu1iKZjSA==", "customer"=>{"email"=>"yytyfp5115@icloud.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (4.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "yytyfp5115@icloud.com"], ["LIMIT", 1]]
+  ↳ app/controllers/publics/sessions_controller.rb:22
+  [1m[36mCustomer Load (4.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "yytyfp5115@icloud.com"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/show
+Completed 302 Found in 792ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:26:15 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 534ms (Views: 495.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:26:17 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (3.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  Rendered publics/cart_items/index.html.erb within layouts/application (14.3ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 570ms (Views: 469.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:26:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (170.1ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 757ms (Views: 713.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:26:21 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/2" for 172.27.0.1 at 2021-10-02 05:26:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 533ms (Views: 483.7ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:26:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3V84tFtL0cbedk+Qu0Rr8CydcWpqetqbFPB9lMCJBLLtvIYr36D+kuIr6n9//Nzxuy6G1NrmQkufPXwgYSrnQg==", "cart_item"=>{"customer_id"=>"2", "item_id"=>"2", "amount"=>"2"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (1.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 2]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (3.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCartItem Create (19.3ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 2], ["item_id", 2], ["amount", 2], ["created_at", "2021-10-02 05:26:25.610023"], ["updated_at", "2021-10-02 05:26:25.610023"]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 181ms (ActiveRecord: 39.1ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:26:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (5.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (14.8ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 541ms (Views: 500.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:27:44 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (1.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (12.5ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 5727ms (Views: 5685.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:28:04 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (2.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (17.4ms)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 755ms (Views: 714.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/orders/new" for 172.27.0.1 at 2021-10-02 05:28:16 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::OrdersController#new as HTML
+  Rendering publics/orders/new.html.erb within layouts/application
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/orders/new.html.erb:23
+  [1m[36mAddress Load (3.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."customer_id" = ?[0m  [["customer_id", 2]]
+  ↳ app/views/publics/orders/new.html.erb:32
+  Rendered publics/orders/new.html.erb within layouts/application (221.7ms)
+Completed 200 OK in 911ms (Views: 790.0ms | ActiveRecord: 21.2ms)
+
+
+Started POST "/confirm" for 172.27.0.1 at 2021-10-02 05:28:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4pE+5GPSmsZDiBc57m6/KQQmJXMF9oq66a/5fr3OJSlVzMD32tcJeoBXyEyNrxGEA46e/ZEzAsmMLPdes4WdNA==", "order"=>{"payment_method"=>"0", "address_option"=>"1", "address_id"=>"1", "postal_code"=>"", "address"=>"", "name"=>""}, "commit"=>"確認画面へ進む"}
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/orders_controller.rb:15
+Unpermitted parameters: :payment_method, :address_option, :address_id
+  [1m[36mAddress Load (2.5ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/orders_controller.rb:23
+  Rendering publics/orders/confirm.html.erb within layouts/application
+  [1m[36mCartItem Load (1.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 2]]
+  ↳ app/views/publics/orders/confirm.html.erb:19
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/orders/confirm.html.erb:22
+  Rendered publics/orders/confirm.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 615ms (Views: 561.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:28:25 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 554ms (Views: 514.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:34:18 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (3.0ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (213.8ms)
+  [1m[36mCustomer Load (3.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 901ms (Views: 826.4ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:34:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/sign_in" for 172.27.0.1 at 2021-10-02 05:34:41 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.1ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 628ms (Views: 607.8ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/admins/sign_in" for 172.27.0.1 at 2021-10-02 05:34:59 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DbxNQ00GNK4dvbZClKRispAqXaVVMdLpsnOXrC3Yt0hU4+h3bj3S0qCbyL6hKXYMWX8tfu7kG7LJvxybECfNJg==", "admin"=>{"email"=>"admin@admin", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (4.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/items
+Completed 302 Found in 398ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/items" for 172.27.0.1 at 2021-10-02 05:34:59 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (2.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:42
+  Rendered admin/items/index.html.erb within layouts/application (210.2ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 798ms (Views: 753.8ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/customers/sign_out" for 172.27.0.1 at 2021-10-02 05:35:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t2IrhkuIHI4ldw9DmJutMyKMsa4DAXr2OepU+YCtvV+f7OodZi2zcOZQMHz9tCivRW5y1j/dqfK+KjsnBk6yEA=="}
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 39ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 172.27.0.1 at 2021-10-02 05:35:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::HomesController#top as HTML
+  Rendering publics/homes/top.html.erb within layouts/application
+  [1m[36mGenre Load (2.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/homes/top.html.erb:8
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."created_at" DESC LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/publics/homes/top.html.erb:31
+  Rendered publics/homes/top.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 545ms (Views: 510.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admins/sign_in" for 172.27.0.1 at 2021-10-02 05:35:16 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 578ms (Views: 576.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 172.27.0.1 at 2021-10-02 05:35:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q8Z/FROs0gXMiMjOjSSgawSP5orJpYUwYSC1M4s0/6ZWLgScnVQyjHUL+nc1JDzGxjIM2csqRcM4hgNaNkEDuA==", "admin"=>{"email"=>"admin@admin", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mAdmin Load (2.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/items
+Completed 302 Found in 408ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/items" for 172.27.0.1 at 2021-10-02 05:35:19 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:42
+  Rendered admin/items/index.html.erb within layouts/application (189.8ms)
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 730ms (Views: 694.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/admin/genres" for 172.27.0.1 at 2021-10-02 05:36:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (2.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:24
+  Rendered admin/genres/index.html.erb within layouts/application (10.5ms)
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 544ms (Views: 501.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/admin/genres/1/edit" for 172.27.0.1 at 2021-10-02 05:36:21 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGenre Load (3.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/genres_controller.rb:20
+  Rendering admin/genres/edit.html.erb within layouts/application
+  Rendered admin/genres/edit.html.erb within layouts/application (2.2ms)
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 549ms (Views: 502.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/items" for 172.27.0.1 at 2021-10-02 05:36:43 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mGenre Load (2.8ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (7.9ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (5.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:42
+  Rendered admin/items/index.html.erb within layouts/application (250.3ms)
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 894ms (Views: 831.3ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/admin/items/new" for 172.27.0.1 at 2021-10-02 05:37:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#new as HTML
+  Rendering admin/items/new.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/items/new.html.erb:27
+  Rendered admin/items/new.html.erb within layouts/application (87.9ms)
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 744ms (Views: 696.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/items" for 172.27.0.1 at 2021-10-02 05:37:31 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mGenre Load (2.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (4.2ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (3.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.1ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:42
+  Rendered admin/items/index.html.erb within layouts/application (241.9ms)
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 854ms (Views: 785.8ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/admin/genres" for 172.27.0.1 at 2021-10-02 05:37:48 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (2.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:24
+  Rendered admin/genres/index.html.erb within layouts/application (11.7ms)
+  [1m[36mAdmin Load (2.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 657ms (Views: 609.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/items" for 172.27.0.1 at 2021-10-02 05:37:49 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#index as HTML
+  Rendering admin/items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin/items/index.html.erb:21
+  [1m[36mGenre Load (2.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mGenre Load (2.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[36mCACHE Genre Load (0.0ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/index.html.erb:30
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin/items/index.html.erb:42
+  Rendered admin/items/index.html.erb within layouts/application (193.9ms)
+  [1m[36mAdmin Load (2.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 892ms (Views: 837.0ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/admin/items/1" for 172.27.0.1 at 2021-10-02 05:38:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/items_controller.rb:7
+  Rendering admin/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (2.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin/items/show.html.erb:22
+  Rendered admin/items/show.html.erb within layouts/application (8.0ms)
+  [1m[36mAdmin Load (1.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:43
+Completed 200 OK in 586ms (Views: 537.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/attachments/95f6b93d78c2b4cdf8cdc840bee5b65e6d960e68/store/fill/220/150/b76ea2d4233870e3a56f2e0ce3566bd6a24db5ea8b3cbd814417b3da536c/image.jpeg" for 172.27.0.1 at 2021-10-02 05:38:01 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-02 05:38:02 +0000] GET "/95f6b93d78c2b4cdf8cdc840bee5b65e6d960e68/store/fill/220/150/b76ea2d4233870e3a56f2e0ce3566bd6a24db5ea8b3cbd814417b3da536c/image.jpeg" 200 748.0ms
+
+Started DELETE "/admins/sign_out" for 172.27.0.1 at 2021-10-02 05:38:21 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NwokI7xv9BMP6tjcNNZ0FjU9pCAd3agLxbT1aNcMLRQhYTBVMxF4OS6onNU5eAGF1tnvG1+sguK8OTvBdUm4iA=="}
+  [1m[36mAdmin Load (2.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admins/sign_in
+Completed 302 Found in 15ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/admins/sign_in" for 172.27.0.1 at 2021-10-02 05:38:21 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 613ms (Views: 610.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customers/sign_in" for 172.27.0.1 at 2021-10-02 05:38:24 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#new as HTML
+  Rendering publics/sessions/new.html.erb within layouts/application
+  Rendered publics/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 630ms (Views: 626.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 172.27.0.1 at 2021-10-02 05:38:27 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DMasqrnJB9kbzBEo7B1zgEx5lp1Zviam1Vq176Fqgf96p9BodwBmZBXmVhB4jmzmgLtLwyEDlQeTkj/m/mEGkg==", "customer"=>{"email"=>"test@test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (4.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ app/controllers/publics/sessions_controller.rb:22
+  [1m[36mCustomer Load (4.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 599ms (ActiveRecord: 9.2ms)
+
+
+Processing by Publics::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DMasqrnJB9kbzBEo7B1zgEx5lp1Zviam1Vq176Fqgf96p9BodwBmZBXmVhB4jmzmgLtLwyEDlQeTkj/m/mEGkg==", "customer"=>{"email"=>"test@test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering publics/sessions/new.html.erb within layouts/application
+  Rendered publics/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 827ms (Views: 541.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers/sign_in" for 172.27.0.1 at 2021-10-02 05:38:37 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/MSP5Ka3m4LdOIO4FfE1U+yrtBl6P7R3xqwvpX1Q1FZuFR1oSmzLFu5pFfzMEqECTpM/dNYP3TbUErZyrYVDg==", "customer"=>{"email"=>"test@test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ app/controllers/publics/sessions_controller.rb:22
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["email", "test@test"], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/show
+Completed 302 Found in 676ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:38:38 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 552ms (Views: 521.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:38:44 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (141.9ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 715ms (Views: 672.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:38:45 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/1" for 172.27.0.1 at 2021-10-02 05:38:47 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (1.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 520ms (Views: 475.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/attachments/7c29defab408875c746d1b7bb8c719637ff55d80/store/fill/220/170/b76ea2d4233870e3a56f2e0ce3566bd6a24db5ea8b3cbd814417b3da536c/image.jpeg" for 172.27.0.1 at 2021-10-02 05:38:48 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-10-02 05:38:48 +0000] GET "/7c29defab408875c746d1b7bb8c719637ff55d80/store/fill/220/170/b76ea2d4233870e3a56f2e0ce3566bd6a24db5ea8b3cbd814417b3da536c/image.jpeg" 200 649.6ms
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:05 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SdXRntkeXhqDgfnivlRcDQO4TVx+Knds+milbWVqTJdq0ZWcpIgqXW02dJNqk4eGYEBBUexlbVL66HQWIFN30w==", "cart_item"=>{"customer_id"=>"1", "item_id"=>"1", "amount"=>"2"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (2.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (3.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCartItem Create (14.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["item_id", 1], ["amount", 2], ["created_at", "2021-10-02 05:39:05.299142"], ["updated_at", "2021-10-02 05:39:05.299142"]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 61ms (ActiveRecord: 31.9ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:05 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (4.7ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (25.4ms)
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 700ms (Views: 658.2ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:07 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (1.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (17.0ms)
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 585ms (Views: 547.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:39:11 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (154.3ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 690ms (Views: 644.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:39:12 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/2" for 172.27.0.1 at 2021-10-02 05:39:13 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 523ms (Views: 478.9ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:17 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEM/8U+Pee144Q97NLguMcXb1/h8JZTvLLyWIMfY4xuLR3vzMhkNqpZWggrgf/W6piPb9e5qjtEsPEdbguHYXw==", "cart_item"=>{"customer_id"=>"1", "item_id"=>"2", "amount"=>"4"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (1.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCartItem Create (9.6ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["item_id", 2], ["amount", 4], ["created_at", "2021-10-02 05:39:17.527553"], ["updated_at", "2021-10-02 05:39:17.527553"]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 67ms (ActiveRecord: 29.6ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:17 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (6.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (8.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (41.6ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 598ms (Views: 546.3ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:39:49 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 531ms (Views: 491.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:39:50 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (169.5ms)
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 697ms (Views: 647.0ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:39:51 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/2" for 172.27.0.1 at 2021-10-02 05:39:52 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 528ms (Views: 480.3ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:55 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vSd9d1AxMVJRxpVGw+7s5uaEdi1bpOutv0c9/SW227N8Nn3oNawgqfwlyTPyGA4+GId1SchiZC2fc2Msa/gKg==", "cart_item"=>{"customer_id"=>"1", "item_id"=>"2", "amount"=>"4"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (2.9ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:13
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:13
+  [1m[36mCartItem Update (10.0ms)[0m  [1m[33mUPDATE "cart_items" SET "amount" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["amount", 8], ["updated_at", "2021-10-02 05:39:55.083653"], ["id", 11]]
+  ↳ app/controllers/publics/cart_items_controller.rb:13
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (4.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 68ms (ActiveRecord: 31.1ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:39:55 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (2.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (23.3ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 689ms (Views: 647.7ms | ActiveRecord: 8.8ms)
+
+
+Started DELETE "/cart_items/destroy_all" for 172.27.0.1 at 2021-10-02 05:40:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#destroy_all as HTML
+  Parameters: {"authenticity_token"=>"ABaI7CVREvIYwUFQslM/ZgovPIUNeU2j0ISFuor1vHunsJ0PH1LUV4LDp/PrOfV5TJmIPhyx1vlf+bGBMz7xFA=="}
+  [1m[36mCustomer Load (2.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:41
+  [1m[36mCartItem Load (2.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[36mCartItem Destroy (10.0ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[36mCartItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 48ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:20 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (4.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (14.7ms)
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 560ms (Views: 523.3ms | ActiveRecord: 8.0ms)
+
+
+Started DELETE "/cart_items/destroy_all" for 172.27.0.1 at 2021-10-02 05:40:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#destroy_all as HTML
+  Parameters: {"authenticity_token"=>"Pk3m/sn5A0ro8PVP6KegRbqHAQm2/pqjNGaZWkYRI66Z6/Md8/rF73LyE+yxzWpa/DG1sqc2Afm7G61h/9puwQ=="}
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:41
+  [1m[36mCartItem Load (1.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (2.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (11.7ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 565ms (Views: 525.2ms | ActiveRecord: 6.2ms)
+
+
+Started DELETE "/cart_items/9" for 172.27.0.1 at 2021-10-02 05:40:39 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pvsp0/6qhTaYWiW9J7XeSexXa0BabN+qPGx6twpXj7iZXTwwxKlDkwJYwx5+3xRWquHf+0ukRPCzEU6Ms5zC1w==", "id"=>"9"}
+  [1m[36mCartItem Load (2.7ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:36
+  [1m[36mCartItem Destroy (11.4ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/publics/cart_items_controller.rb:36
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:36
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 41ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:39 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (3.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  Rendered publics/cart_items/index.html.erb within layouts/application (8.3ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 547ms (Views: 508.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:40:42 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (162.1ms)
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 750ms (Views: 712.8ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:40:42 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/2" for 172.27.0.1 at 2021-10-02 05:40:43 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (3.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 508ms (Views: 466.3ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:46 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/HtEE792Ka3aAnidP/Hlgzcf9RAFVDCDh3OrkVC65XvffwARwuBd6jS19ezrNj4IVOf5HZcbKr2H83rqFYPePw==", "cart_item"=>{"customer_id"=>"1", "item_id"=>"2", "amount"=>"3"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (2.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCartItem Create (11.3ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["item_id", 2], ["amount", 3], ["created_at", "2021-10-02 05:40:46.703290"], ["updated_at", "2021-10-02 05:40:46.703290"]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 54ms (ActiveRecord: 29.5ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:46 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (4.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (14.6ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 574ms (Views: 533.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:40:48 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (3.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 516ms (Views: 475.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/show" for 172.27.0.1 at 2021-10-02 05:40:50 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CustomersController#show as HTML
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/bundle/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendering publics/customers/show.html.erb within layouts/application
+  Rendered publics/customers/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 544ms (Views: 508.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/items" for 172.27.0.1 at 2021-10-02 05:40:51 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#index as HTML
+  Rendering publics/items/index.html.erb within layouts/application
+  [1m[36mGenre Load (1.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/index.html.erb:6
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "items" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:18
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/publics/items/index.html.erb:22
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/publics/items/index.html.erb:39
+  Rendered publics/items/index.html.erb within layouts/application (160.2ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 708ms (Views: 662.5ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/public_index.js" for 172.27.0.1 at 2021-10-02 05:40:52 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/public_index.js"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items/1" for 172.27.0.1 at 2021-10-02 05:40:53 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/items_controller.rb:8
+  Rendering publics/items/show.html.erb within layouts/application
+  [1m[36mGenre Load (1.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/publics/items/show.html.erb:6
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/items/show.html.erb:25
+  Rendered publics/items/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 524ms (Views: 479.6ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:56 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zfm2zRrs3UIj3Zoyla0IDxxU+jodCqM8kD/e8MkCFKFG/fLPZ3qpBc1qF0NBatOEf6z2N49FuQKQvw+LjDsv5Q==", "cart_item"=>{"customer_id"=>"1", "item_id"=>"1", "amount"=>"4"}, "commit"=>"カートに入れる"}
+  [1m[36mCustomer Load (3.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:8
+  [1m[36mCartItem Load (2.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[36mCartItem Create (10.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("customer_id", "item_id", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["customer_id", 1], ["item_id", 1], ["amount", 4], ["created_at", "2021-10-02 05:40:56.293283"], ["updated_at", "2021-10-02 05:40:56.293283"]]
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:24
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 54ms (ActiveRecord: 26.8ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:40:56 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (4.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (22.2ms)
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 649ms (Views: 604.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:42:10 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  Rendered publics/cart_items/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/app_name/app/views/publics/cart_items/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e, class: "btn btn-danger" data: {confirm: "本当に削除...
+...                           ^~~~):
+  
+app/views/publics/cart_items/index.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:42:22 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (3.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  [1m[36mItem Load (3.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/publics/cart_items/index.html.erb:26
+  Rendered publics/cart_items/index.html.erb within layouts/application (25.2ms)
+  [1m[36mCustomer Load (2.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 870ms (Views: 811.3ms | ActiveRecord: 11.8ms)
+
+
+Started DELETE "/cart_items/destroy_all" for 172.27.0.1 at 2021-10-02 05:42:28 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#destroy_all as HTML
+  Parameters: {"authenticity_token"=>"fl7anlDagxF0Za1XJ6Rw0thRL+S04/OOLBHp+FlUQZbZ+M99atlFtO5nS/R+zrrNnuebX6UraNSjbN3D4J8M+Q=="}
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:41
+  [1m[36mCartItem Load (2.1ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[36mCartItem Destroy (11.8ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[36mCartItem Destroy (0.1ms)[0m  [1m[31mDELETE FROM "cart_items" WHERE "cart_items"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 55ms (ActiveRecord: 30.0ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:42:28 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (5.4ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  Rendered publics/cart_items/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCustomer Load (2.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 557ms (Views: 514.5ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/cart_items/destroy_all" for 172.27.0.1 at 2021-10-02 05:42:41 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#destroy_all as HTML
+  Parameters: {"authenticity_token"=>"DjlR2Dr2NjXnM5wo+sTQl7DQSUQGT8HcGMCIHkZFpISpn0Q7APXwkH0xeoujrhqI9mb9/xeHWoaXvbwl/47p6w=="}
+  [1m[36mCustomer Load (2.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:41
+  [1m[36mCartItem Load (1.7ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."customer_id" = ?[0m  [["customer_id", 1]]
+  ↳ app/controllers/publics/cart_items_controller.rb:42
+Redirected to http://localhost:3000/cart_items
+Completed 302 Found in 16ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/cart_items" for 172.27.0.1 at 2021-10-02 05:42:41 +0000
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Publics::CartItemsController#index as HTML
+  Rendering publics/cart_items/index.html.erb within layouts/application
+  [1m[36mCartItem Load (2.8ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/views/publics/cart_items/index.html.erb:23
+  Rendered publics/cart_items/index.html.erb within layouts/application (8.3ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:14
+Completed 200 OK in 663ms (Views: 626.1ms | ActiveRecord: 4.7ms)
+
+
