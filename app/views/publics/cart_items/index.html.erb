@@ -4,9 +4,13 @@
             <h2>ショッピングカート</h2>
         </div>
         <div>
-            <p><%= link_to "カートを空にする", cart_items_destroy_all_path, method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか?"}%></p>
+            <p><%= link_to "カートを空にする", cart_items_destroy_all_path, method: :delete, class: "btn btn-danger", data: {confirm: "本当に削除しますか?"} %></p>
         </div>
     </div>
+
+    <p class="sucess_noice"><%= flash[:notice] %></p>
+    <p class="error_notice"><%= flash[:error] %></p>
+
     <div id="public_cartitem_index_table_wrap">
         <table border="1">
             <thead>

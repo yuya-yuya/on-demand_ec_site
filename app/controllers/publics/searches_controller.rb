@@ -22,7 +22,7 @@ class Publics::SearchesController < ApplicationController
         render "publics/items/index"
         #renderを使うことでコントローラーを経由させない。コントローラーを経由すると変数が変わる。
       else
-        flash[:error] = "検索結果なし"
+        flash[:error] = "検索条件を追加してください。"
         redirect_to root_path
       end
     end

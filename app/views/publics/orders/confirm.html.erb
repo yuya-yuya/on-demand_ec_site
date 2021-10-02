@@ -71,7 +71,7 @@
             <%= f.hidden_field :total_payment, :value => @num %>
             <%= f.hidden_field :payment_method, :value => @order.payment_method %>
             <p id="public_order_confirm_submit">
-                <%= f.submit "注文を確定する", class: "btn btn-success" %>
+                <%= f.submit "注文を確定する", class: "btn btn-success", data: {confirm: "注文を確定する"} %>
             </p>
         <% end %>
     </div>

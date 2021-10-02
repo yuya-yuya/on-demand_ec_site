@@ -5,7 +5,7 @@
 
     <div id="public_addresses_edit_table_wrap">
         <%= form_with model:@address, url: address_path, local:true do |f| %>
-            <%= flash[:error] %>
+            <p class="error_notice"><%= flash[:error] %></p>
             <table id="public_addresses_edit_firsttable">
                 <tr>
                     <th><%= f.label :郵便番号（ハイフンなし） %></th>

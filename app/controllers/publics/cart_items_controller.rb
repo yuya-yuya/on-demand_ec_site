@@ -22,24 +22,28 @@ class Publics::CartItemsController < ApplicationController
         #     @cart_item.delete
         # end
         @cart_item.save
+        flash[:notice] = "カートに商品を追加しました。"
         redirect_to cart_items_path
     end
     
     def update
         @cart_item = CartItem.find(params[:id])
-        @cart_item.update(cart_item_params)
+        @cart_item.update(cart_items_params)
+        flash[:notice] = "数量を更新しました。"
         redirect_to cart_items_path
     end
     
     def destroy
         @cart_item = CartItem.find(params[:id])
         @cart_item.destroy
+        flash[:error] = "商品を削除しました。"
         redirect_to cart_items_path
     end
     
     def destroy_all
         @cart_item = current_customer.cart_items
         @cart_item.destroy_all
+        flash[:error] = "カート内商品を全て削除しました。"
         redirect_to cart_items_path
         # destroyは一つ、destroy_allは複数を削除する
     end

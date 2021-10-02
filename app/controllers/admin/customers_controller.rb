@@ -15,6 +15,7 @@ class Admin::CustomersController < ApplicationController
         @customer = Customer.find(params[:id])
         @customer.is_subscribed = params[:customer][:is_subscribed].to_i
         if @customer.update(custmer_params)
+            flash[:notice] = "ユーザー情報を更新しました。"
             redirect_to admin_customer_path(@customer.id)
         else
             flash[:error] = "必須項目を記入してください。"

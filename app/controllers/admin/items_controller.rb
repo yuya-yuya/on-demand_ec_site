@@ -21,17 +21,24 @@ class Admin::ItemsController < ApplicationController
         @item = Item.new(item_params)
         @genres = Genre.all
         if @item.save
+            flash[:notice] = '商品を新規追加しました。'
             redirect_to admin_item_path(@item)
         else
-            flash[:error] = '必須項目を入力してください'
+            flash[:error] = '必須項目を入力してください。'
             render :new
         end
     end
 
     def update
         @item = Item.find(params[:id])
-        @item.update(item_params)
-        redirect_to admin_items_path
+        @genres = Genre.all
+        if @item.update(item_params)
+            flash[:notice] = '商品情報を更新しました。'
+            redirect_to admin_item_path(@item.id)
+        else
+            flash[:error] = '必須項目を入力してください。'
+            render :edit
+        end
     end
     
     private
