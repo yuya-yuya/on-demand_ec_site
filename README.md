@@ -16,10 +16,52 @@
   - 検索機能を備えています、ヘッダーにある検索窓から商品を検索できます。
   - ジャンル検索機能を備えています。サイトバーのジャンル一覧からジャンルを絞り込めます。
 ### ホーム画面
-<img width="1218" alt="スクリーンショット 2021-10-01 17 04 56" src="https://user-images.githubusercontent.com/68839987/135587763-66e44c50-cec0-4e9f-9119-2143b8a120c2.png">
 ユーザーホーム画面。ヘッダーからログインや新規登録、商品一覧が見れます。ログインしていなくても、商品一覧や詳細は見れますが、注文はできません。
+<img width="1218" alt="スクリーンショット 2021-10-01 17 04 56" src="https://user-images.githubusercontent.com/68839987/135587763-66e44c50-cec0-4e9f-9119-2143b8a120c2.png">
+
+### ログイン画面
+顧客ログイン画面
+<img width="1417" alt="スクリーンショット 2021-10-03 15 25 26" src="https://user-images.githubusercontent.com/68839987/135742706-b91b0998-b87f-41bb-adb1-38d4896d66da.png">
+<br>
+管理者側ログイン画面
+<img width="1383" alt="スクリーンショット 2021-10-03 15 25 38" src="https://user-images.githubusercontent.com/68839987/135742711-0a540439-12a5-4442-ba84-01f7f854dd3b.png">
+<br>
+顧客退会画面。ここで退会するとこのアカウントではログインできない。
+<img width="1363" alt="スクリーンショット 2021-10-03 15 26 04" src="https://user-images.githubusercontent.com/68839987/135742712-25f607a5-4a53-45ee-b18d-1e36ba0b03da.png">
+
+### 商品購入画面
+商品詳細からカートへ商品を追加。
+<img width="1410" alt="スクリーンショット 2021-10-03 15 33 53" src="https://user-images.githubusercontent.com/68839987/135742966-f2e348e1-bc75-4f23-86ad-c4c1623712e0.png">
+<br>
+カート内商品確認画面。ここから購入情報入力画面が飛べます。
+<img width="1388" alt="スクリーンショット 2021-10-03 15 34 20" src="https://user-images.githubusercontent.com/68839987/135742986-309fa3c1-318e-41c9-a74a-169f8c646611.png">
+<br>
+注文情報入力画面。
+<img width="1400" alt="スクリーンショット 2021-10-03 15 35 02" src="https://user-images.githubusercontent.com/68839987/135742994-d4530ef1-0ca8-4a88-80f7-d7f5f10546ca.png">
+<br>
+注文情報入力最終確認画面。
+<img width="1390" alt="スクリーンショット 2021-10-03 15 35 13" src="https://user-images.githubusercontent.com/68839987/135743014-f84e4c72-64c6-4367-845a-77774dd56c03.png">
+<br>
+購入完了画面
+<img width="1398" alt="スクリーンショット 2021-10-03 15 35 23" src="https://user-images.githubusercontent.com/68839987/135743019-0875e32c-3782-4541-9e09-c0db03d4cc5b.png">
+
+### 配送先追加
+ここから配送先を追加できます。
+<img width="1385" alt="スクリーンショット 2021-10-03 15 40 24" src="https://user-images.githubusercontent.com/68839987/135743123-aa9a50ba-c257-4fe1-81ac-1f27da630da7.png">
+
+### 注文履歴確認画面
+ここから全ての顧客の購入一覧を確認できます。管理者側からしか確認できません。
+<img width="1388" alt="スクリーンショット 2021-10-03 15 41 01" src="https://user-images.githubusercontent.com/68839987/135743154-53d5ec13-f8aa-4d1c-89b4-5024ba99840d.png">
+<br>
+購入履歴の詳細確認画面。注文ステータス、製作ステータスを更新できます。管理者側からしか確認できません。
+<img width="1352" alt="スクリーンショット 2021-10-03 15 41 11" src="https://user-images.githubusercontent.com/68839987/135743190-3b3d4d43-7cd4-468c-b47a-16a1a284044a.png">
+
 
 # Features
+  ### ER図
+  <img width="910" alt="スクリーンショット 2021-10-03 15 23 40" src="https://user-images.githubusercontent.com/68839987/135742636-d8bd8856-be3c-470e-b4ec-68bd689a1b8f.png">
+
+  
 
 # Dependency
   - Ruby '2.6.6'(言語)
